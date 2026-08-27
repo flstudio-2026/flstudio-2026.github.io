@@ -1,1948 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FL Studio 2026 | Music production software for Windows and macOS</title>
-<meta name="description" content="Independent FL Studio 2026 notes. Windows 26.1.4.5589 (1.03 GB, 10 Aug 2026) and macOS 26.1.4.5356. Lifetime Free Updates, editions, FLEX, and FL Cloud on fl-studio.net.">
-<meta name="theme-color" content="#050607">
-<link rel="canonical" href="https://fl-studio.net/">
-<link rel="alternate" hreflang="en" href="https://fl-studio.net/" />
-<link rel="alternate" hreflang="ru" href="https://fl-studio.net/ru/" />
-<link rel="alternate" hreflang="zh-Hans" href="https://fl-studio.net/cn/" />
-<link rel="alternate" hreflang="ar" href="https://fl-studio.net/ar/" />
-<link rel="alternate" hreflang="es" href="https://fl-studio.net/sp/" />
-<link rel="alternate" hreflang="hi" href="https://fl-studio.net/hi/" />
-<link rel="alternate" hreflang="he" href="https://fl-studio.net/he/" />
-<link rel="alternate" hreflang="x-default" href="https://fl-studio.net/" />
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="FL Studio">
-<meta property="og:url" content="https://fl-studio.net/">
-<meta property="og:title" content="FL Studio 2026 | Music production software for Windows and macOS">
-<meta property="og:description" content="Independent FL Studio 2026 notes. Windows 26.1.4.5589 (1.03 GB, 10 Aug 2026) and macOS 26.1.4.5356. Lifetime Free Updates, editions, FLEX, and FL Cloud on fl-studio.net.">
-<meta property="og:image" content="https://fl-studio.net/media/orbit-field.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="FL Studio 2026 | Music production software for Windows and macOS">
-<meta name="twitter:description" content="Independent FL Studio 2026 notes. Windows 26.1.4.5589 (1.03 GB, 10 Aug 2026) and macOS 26.1.4.5356. Lifetime Free Updates, editions, FLEX, and FL Cloud on fl-studio.net.">
-<meta name="twitter:image" content="https://fl-studio.net/media/orbit-field.png">
-<link rel="icon" href="media/brand-mark.png" type="image/png">
-<link rel="apple-touch-icon" href="media/app-seal.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&family=Noto+Sans+SC:wght@400;700&family=Noto+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-<style type="text/tailwindcss">
-/* ===== SITE THEME - EDIT ONLY HERE TO RESTYLE THE WHOLE SITE ===== */
-@theme {
-  --color-base: #050607;
-  --color-soft: #090A0C;
-  --color-surface: #0D0F12;
-  --color-ink: #F5F5F2;
-  --color-muted: #9B9DA2;
-  --color-brand: #ff6a21;
-  --color-accent: #c2410c;
-  --color-border: rgba(255,255,255,0.10);
-  --font-display: "Outfit", system-ui, sans-serif;
-  --font-body: "Manrope", system-ui, sans-serif;
-}
-</style>
-<style>
-  html { color-scheme: dark; overflow-x: hidden; }
-  body { background: var(--color-base, #080808); color: var(--color-ink, #F4F1EA); font-family: var(--font-body, "Source Sans 3"), system-ui, sans-serif; }
-  .font-display { font-family: var(--font-display, Syne), system-ui, sans-serif; }
-  ::selection { background: var(--color-brand); color: var(--color-ink); }
-  a:focus-visible, button:focus-visible { outline: 2px solid var(--color-brand); outline-offset: 3px; }
-  .skip { position: absolute; left: 12px; top: -48px; z-index: 80; background: var(--color-brand); color: var(--color-ink); padding: 8px 12px; }
-  .skip:focus { top: 12px; }
-  .btn-primary {
-    display: inline-flex; align-items: center; gap: 10px;
-    background: var(--color-brand); color: var(--color-ink);
-    font-family: var(--font-display); font-weight: 700; letter-spacing: -0.02em;
-    font-size: 0.95rem; line-height: 1; padding: 14px 22px;
-    border: 1px solid color-mix(in srgb, var(--color-ink) 18%, var(--color-brand));
-    border-radius: 4px; transition: transform 200ms ease, filter 200ms ease, box-shadow 200ms ease;
-  }
-  .btn-primary:hover { transform: translateY(-2px); filter: brightness(1.06); }
-  .btn-primary:active { transform: translateY(0); }
-  .btn-primary svg { transition: transform 200ms ease; }
-  .btn-primary:hover svg { transform: translateY(2px); }
-  .btn-secondary {
-    display: inline-flex; align-items: center; gap: 10px;
-    background: transparent; color: var(--color-ink);
-    font-family: var(--font-display); font-weight: 600; letter-spacing: -0.02em;
-    font-size: 0.95rem; line-height: 1; padding: 13px 20px;
-    border: 1px solid var(--color-border); border-radius: 4px;
-    transition: transform 200ms ease, background 200ms ease, border-color 200ms ease;
-  }
-  .btn-secondary:hover { transform: translateY(-2px); background: var(--color-surface); border-color: color-mix(in srgb, var(--color-ink) 22%, transparent); }
-  .btn-text {
-    display: inline-flex; align-items: center; gap: 8px; color: var(--color-ink);
-    font-weight: 600; border-bottom: 1px solid color-mix(in srgb, var(--color-brand) 70%, transparent);
-    padding-bottom: 2px; transition: gap 200ms ease, color 200ms ease;
-  }
-  .btn-text:hover { gap: 12px; color: var(--color-brand); }
-  .site-header {
-    position: sticky; top: 0; z-index: 50; min-height: 76px;
-    background: transparent; border-bottom: 1px solid transparent;
-    transition: background 220ms ease, border-color 220ms ease;
-  }
-  .site-header.is-scrolled, body:not(.page-home) .site-header {
-    background: color-mix(in srgb, var(--color-base) 92%, transparent);
-    border-bottom-color: var(--color-border);
-  }
-  .nav-a { color: color-mix(in srgb, var(--color-ink) 88%, transparent); font-size: 0.95rem; transition: color 180ms ease; }
-  .nav-a:hover { color: var(--color-brand); }
-  .header-bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 76px; }
-  .header-logo img { height: 32px; width: auto; max-width: 148px; object-fit: contain; object-position: left center; }
-  .header-actions { display: flex; flex-shrink: 0; align-items: center; gap: 12px; }
-  .menu-btn { width: 42px; height: 42px; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; border: 1px solid color-mix(in srgb, var(--color-ink, #F4F1EA) 28%, transparent); border-radius: 4px; color: var(--color-ink, #F4F1EA); background: var(--color-soft, #101010); }
-  .nav-desktop { display: none; align-items: center; gap: 1.75rem; }
-  .header-dl { display: none; }
-  @media (min-width: 640px) {
-    .header-dl { display: inline-flex; }
-  }
-  @media (min-width: 1024px) {
-    .nav-desktop { display: flex; }
-    .menu-btn { display: none !important; }
-    .mobile-nav.open { display: none !important; }
-  }
-  .mobile-nav { display: none; background: var(--color-soft); border-bottom: 1px solid var(--color-border); }
-  .mobile-nav.open { display: block; position: absolute; left: 0; right: 0; top: 76px; z-index: 51; }
-  .hero-home {
-    position: relative; min-height: 92vh; display: flex; align-items: flex-end;
-    background: #120904 url("media/orbit-field.png") center / cover no-repeat;
-  }
-  .hero-home .overlays { pointer-events: none; position: absolute; inset: 0; }
-  .hero-home .ov-dark { position: absolute; inset: 0; background: rgba(8,8,8,0.28); }
-  .hero-home .ov-warm { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(154,62,32,0.18), transparent 42%, rgba(8,8,8,0.2)); }
-  .hero-home .ov-copy { position: absolute; left: 0; right: 0; bottom: 0; top: 28%; background: linear-gradient(180deg, transparent, rgba(8,8,8,0.35) 36%, rgba(8,8,8,0.72) 72%, #080808 100%); }
-  .hero-home .ov-vig { position: absolute; inset: 0; background: radial-gradient(120% 80% at 50% 40%, transparent 40%, rgba(8,8,8,0.45) 100%); }
-  .hero-home .ov-grain {
-    position: absolute; inset: 0; opacity: 0.09; mix-blend-mode: overlay;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
-  }
-  .hero-in { opacity: 0; transform: translateY(12px); animation: heroIn 740ms cubic-bezier(.2,.7,.2,1) forwards; }
-  .d1 { animation-delay: 70ms; } .d2 { animation-delay: 150ms; } .d3 { animation-delay: 230ms; } .d4 { animation-delay: 310ms; }
-  @keyframes heroIn { to { opacity: 1; transform: none; } }
-  .page-hero {
-    position: relative; padding: 88px 0 56px;
-    background:
-      radial-gradient(80% 60% at 80% 0%, rgba(231,96,36,0.12), transparent 55%),
-      linear-gradient(180deg, #101010, #080808);
-    overflow: hidden;
-  }
-  .page-hero::before {
-    content: ""; position: absolute; left: 12%; top: 0; bottom: 0; width: 1px;
-    background: linear-gradient(180deg, var(--color-brand), transparent 70%);
-  }
-  .page-hero::after {
-    content: ""; position: absolute; left: calc(12% - 5px); top: 72px; width: 0; height: 0;
-    border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 7px solid var(--color-brand);
-  }
-  .playhead { position: relative; height: 36px; }
-  .playhead .rail {
-    position: absolute; left: 0; right: 0; top: 50%; height: 1px;
-    background: linear-gradient(90deg, transparent, var(--color-border), transparent);
-  }
-  .playhead .ticks {
-    position: absolute; left: 6%; right: 6%; top: 50%; height: 8px; transform: translateY(-50%);
-    background: repeating-linear-gradient(90deg, color-mix(in srgb, var(--color-ink) 22%, transparent) 0 1px, transparent 1px 28px);
-    opacity: 0.55;
-  }
-  .playhead .head {
-    position: absolute; left: var(--ph, 18%); top: 4px; bottom: 4px; width: 1px; background: var(--color-brand);
-  }
-  .playhead .head::before {
-    content: ""; position: absolute; top: -2px; left: 50%; transform: translateX(-50%);
-    border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 7px solid var(--color-brand);
-  }
-  .playhead-feature .rail { background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--color-brand) 45%, transparent), transparent); }
-  .win { border: 1px solid var(--color-border); background: #0b0b0b; border-radius: 8px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.45); }
-  .win-bar { display: flex; align-items: center; gap: 6px; height: 34px; padding: 0 12px; background: #121212; border-bottom: 1px solid var(--color-border); }
-  .win-bar i { width: 8px; height: 8px; border-radius: 99px; background: #3a3a3a; display: block; }
-  .win-bar i:nth-child(1) { background: #5a4036; } .win-bar i:nth-child(2) { background: #4a4a4a; } .win-bar i:nth-child(3) { background: #3f3f3f; }
-  .win-bar span { margin-left: 8px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-muted); }
-  .lightbox { position: fixed; inset: 0; z-index: 80; background: rgba(0,0,0,0.86); display: none; align-items: center; justify-content: center; padding: 24px; }
-  .lightbox.open { display: flex !important; }
-  .lightbox img { max-width: min(1200px, 92vw); max-height: 88vh; border: 1px solid var(--color-border); }
-  .lb-x { position: absolute; top: 18px; right: 18px; width: 44px; height: 44px; border: 1px solid var(--color-border); color: var(--color-ink); background: var(--color-soft); font-size: 22px; line-height: 1; }
-  .js-lb { cursor: zoom-in; }
-  .marquee { overflow: hidden; }
-  .marquee-track { display: flex; gap: 18px; width: max-content; animation: marq 64s linear infinite; }
-  .marquee:hover .marquee-track { animation-play-state: paused; }
-  @keyframes marq { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-  .creator-rail {
-    overflow: hidden;
-    mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
-    -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
-  }
-  .creator-track {
-    display: flex; align-items: center; gap: 40px; width: max-content;
-    animation: creatorMarq 55s linear infinite;
-  }
-  .creator-rail:hover .creator-track { animation-play-state: paused; }
-  @keyframes creatorMarq { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-  .creator-item {
-    display: flex; align-items: center; gap: 12px; flex-shrink: 0; min-width: max-content;
-  }
-  .creator-item img {
-    width: 44px; height: 44px; border-radius: 999px; object-fit: cover;
-    border: 1px solid var(--color-border);
-  }
-  .creator-item .cname {
-    font-family: var(--font-display); font-weight: 700; font-size: 15px;
-    line-height: 1.2; color: var(--color-ink); white-space: nowrap;
-  }
-  .creator-item .crole {
-    font-size: 13px; line-height: 1.3; color: var(--color-muted); white-space: nowrap;
-  }
-  .hits-section {
-    background: #080808;
-    padding: clamp(88px, 8vw, 120px) 0 clamp(56px, 6vw, 96px);
-    overflow-x: hidden;
-    position: relative;
-    scroll-margin-top: 76px;
-  }
-  .hits-head {
-    position: relative;
-    z-index: 2;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 24px;
-    text-align: center;
-  }
-  .hits-head h2 {
-    font-family: var(--font-display);
-    font-size: clamp(36px, 4.6vw, 68px);
-    font-weight: 800;
-    line-height: 0.96;
-    letter-spacing: -0.04em;
-    color: var(--color-ink);
-  }
-  .hits-head p {
-    margin: 22px auto 0;
-    max-width: 36rem;
-    font-size: clamp(16px, 1.25vw, 18px);
-    line-height: 1.55;
-    color: var(--color-muted);
-  }
-  .hits-gallery-wrap {
-    width: calc(100% + 20px);
-    margin: 52px 0 0 -10px;
-  }
-  @media (min-width: 1600px) {
-    .hits-gallery-wrap {
-      width: calc(100% + 24px);
-      margin-left: -12px;
-    }
-  }
-  .hits-gallery {
-    display: grid;
-    grid-template-columns: repeat(var(--hits-n, 7), minmax(0, 1fr));
-    gap: 16px;
-    align-items: start;
-  }
-  @media (min-width: 1920px) {
-    .hits-gallery { gap: 18px; }
-  }
-  .hits-column {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    min-width: 0;
-  }
-  @media (min-width: 1920px) {
-    .hits-column { gap: 18px; }
-  }
-  @media (min-width: 1600px) {
-    .hits-column-1, .hits-column-7 { padding-top: 0; }
-    .hits-column-2, .hits-column-6 { padding-top: 35px; }
-    .hits-column-3, .hits-column-5 { padding-top: 70px; }
-    .hits-column-4 { padding-top: 105px; }
-  }
-  .hits-item {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background: transparent;
-    display: block;
-    width: 100%;
-    cursor: pointer;
-    position: relative;
-    border-radius: 4px;
-    overflow: hidden;
-    color: inherit;
-    text-align: left;
-    transform: translateZ(0);
-    transition: transform 220ms ease;
-  }
-  .hits-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 4px;
-  }
-  .hits-item .hits-overlay {
-    position: absolute;
-    inset: auto 0 0 0;
-    padding: 40px 12px 12px;
-    background: linear-gradient(180deg, transparent, rgba(0,0,0,0.78));
-    opacity: 0;
-    transform: translateY(6px);
-    transition: opacity 220ms ease, transform 220ms ease;
-    pointer-events: none;
-  }
-  .hits-item .hits-overlay strong {
-    display: block;
-    font-family: var(--font-display);
-    font-size: 14px;
-    font-weight: 700;
-    color: #fff;
-    line-height: 1.25;
-  }
-  .hits-item .hits-overlay span {
-    display: block;
-    margin-top: 3px;
-    font-size: 12px;
-    color: rgba(244,241,234,0.78);
-  }
-  @media (hover: hover) and (pointer: fine) {
-    .hits-item:hover { transform: scale(1.015); z-index: 2; }
-    .hits-item:hover .hits-overlay { opacity: 1; transform: none; }
-  }
-  .hits-item:focus-visible {
-    outline: 2px solid var(--color-brand);
-    outline-offset: 3px;
-  }
-  .hits-modal {
-    position: fixed;
-    inset: 0;
-    z-index: 90;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    background: rgba(0,0,0,0.85);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-  }
-  .hits-modal.open { display: flex; }
-  .hits-modal-dialog {
-    position: relative;
-    width: min(980px, 100%);
-    max-height: min(92vh, 900px);
-    overflow: auto;
-    background: #101010;
-    border: 1px solid rgba(255,255,255,0.10);
-    border-radius: 8px;
-    box-shadow: 0 30px 80px rgba(0,0,0,0.55);
-    transform: scale(0.96);
-    opacity: 0;
-    transition: transform 260ms ease, opacity 260ms ease;
-  }
-  .hits-modal.open .hits-modal-dialog {
-    transform: scale(1);
-    opacity: 1;
-  }
-  .hits-modal-close {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    z-index: 2;
-    width: 44px;
-    height: 44px;
-    border: 1px solid rgba(255,255,255,0.12);
-    background: #151515;
-    color: var(--color-ink);
-    font-size: 22px;
-    line-height: 1;
-    border-radius: 4px;
-  }
-  .hits-modal-grid {
-    display: grid;
-    gap: 0;
-  }
-  @media (min-width: 800px) {
-    .hits-modal-grid { grid-template-columns: 1.05fr 0.95fr; align-items: center; }
-  }
-  .hits-modal-grid img {
-    width: 100%;
-    height: auto;
-    display: block;
-    max-height: 70vh;
-    object-fit: contain;
-    background: #0a0a0a;
-  }
-  .hits-modal-copy {
-    padding: 28px 24px 32px;
-  }
-  @media (min-width: 800px) {
-    .hits-modal-copy { padding: 40px 36px; }
-  }
-  .hits-modal-copy h3 {
-    font-family: var(--font-display);
-    font-size: clamp(1.8rem, 3vw, 2.6rem);
-    font-weight: 800;
-    letter-spacing: -0.03em;
-    line-height: 1.05;
-  }
-  .hits-modal-copy .hits-artist {
-    margin-top: 10px;
-    font-size: 1.05rem;
-    color: var(--color-muted);
-  }
-  .hits-modal-copy .hits-producer {
-    margin-top: 22px;
-    font-size: 0.95rem;
-    color: color-mix(in srgb, var(--color-ink) 80%, var(--color-brand));
-  }
-  body.hits-lock { overflow: hidden; }
-  @media (prefers-reduced-motion: reduce) {
-    .hits-item, .hits-item img, .hits-item .hits-overlay, .hits-modal-dialog { transition: none; }
-    .hits-item:hover { transform: none; }
-    .hits-modal.open .hits-modal-dialog { transform: none; }
-  }
-  .edition-pick {
-    display: flex; align-items: flex-start; gap: 14px; width: 100%; text-align: left;
-    border: 1px solid var(--color-border); background: var(--color-surface);
-    border-radius: 10px; padding: 16px 18px; color: inherit; cursor: pointer;
-    transition: border-color 180ms ease, background 180ms ease;
-  }
-  .edition-pick:hover { border-color: color-mix(in srgb, var(--color-ink) 22%, transparent); }
-  .edition-pick.is-active {
-    border-color: var(--color-brand);
-    background: color-mix(in srgb, var(--color-brand) 8%, var(--color-surface));
-  }
-  .edition-radio {
-    width: 18px; height: 18px; border-radius: 999px; border: 1.5px solid var(--color-muted);
-    margin-top: 3px; flex-shrink: 0; display: grid; place-items: center;
-  }
-  .edition-pick.is-active .edition-radio {
-    border-color: var(--color-brand);
-    background: radial-gradient(circle at center, var(--color-brand) 0 45%, transparent 48%);
-  }
-  .edition-badge {
-    display: inline-block; margin-left: 8px; padding: 2px 8px; border-radius: 4px;
-    background: var(--color-brand); color: var(--color-ink);
-    font-size: 10px; font-weight: 700; letter-spacing: 0.06em; vertical-align: middle;
-  }
-  .edition-detail { display: none; margin-top: 8px; font-size: 14px; line-height: 1.55; color: var(--color-muted); }
-  .edition-pick.is-active .edition-detail { display: block; }
-  .pay-row {
-    display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: center;
-    margin-top: 18px; color: var(--color-muted); font-size: 11px; letter-spacing: 0.04em;
-  }
-  .pay-chip {
-    border: 1px solid var(--color-border); border-radius: 4px; padding: 4px 8px;
-    font-family: var(--font-display); font-weight: 600; font-size: 10px; letter-spacing: 0.04em;
-  }
-  .community-masonry {
-    column-count: 1; column-gap: 18px;
-  }
-  @media (min-width: 640px) { .community-masonry { column-count: 2; } }
-  @media (min-width: 900px) { .community-masonry { column-count: 3; } }
-  @media (min-width: 1200px) { .community-masonry { column-count: 4; } }
-  .c-card {
-    break-inside: avoid; margin-bottom: 18px;
-    background: #151515; border: 1px solid var(--color-border);
-    border-radius: 12px; overflow: hidden;
-  }
-  .c-card-quote { padding: 22px 20px 18px; }
-  .c-card-quote p { font-size: 16px; line-height: 1.55; color: var(--color-ink); }
-  .c-person {
-    display: flex; align-items: center; gap: 10px; margin-top: 16px;
-  }
-  .c-person img {
-    width: 36px; height: 36px; border-radius: 999px; object-fit: cover;
-    border: 1px solid var(--color-border);
-  }
-  .c-person strong { display: block; font-family: var(--font-display); font-size: 14px; font-weight: 700; }
-  .c-person span { display: block; font-size: 12px; color: var(--color-muted); }
-  .c-card-media { position: relative; }
-  .c-card-media img, .c-card-media video {
-    display: block; width: 100%; height: auto; vertical-align: middle;
-  }
-  .c-card-media .c-cap {
-    position: absolute; left: 0; right: 0; bottom: 0;
-    padding: 40px 14px 14px;
-    background: linear-gradient(180deg, transparent, rgba(0,0,0,0.82));
-  }
-  .c-card-media .c-cap strong { display: block; font-family: var(--font-display); font-size: 14px; font-weight: 700; }
-  .c-card-media .c-cap span { display: block; font-size: 12px; color: #c9c6c0; }
-  .c-play {
-    position: absolute; inset: 0; display: grid; place-items: center;
-    background: rgba(0,0,0,0.18); border: 0; cursor: pointer; width: 100%;
-  }
-  .c-play svg {
-    width: 56px; height: 56px; color: #fff; filter: drop-shadow(0 6px 16px rgba(0,0,0,0.45));
-  }
-  .c-card-media.is-playing .c-play { display: none; }
-  .float-dl {
-    position: fixed; right: 24px; bottom: 24px; z-index: 45;
-    display: flex; align-items: center; gap: 12px;
-    background: var(--color-surface); border: 1px solid var(--color-border);
-    border-left: 2px solid var(--color-brand); padding: 12px 16px 12px 14px;
-    box-shadow: 0 16px 40px rgba(0,0,0,0.4); transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
-  }
-  .float-dl:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--color-ink) 20%, transparent); box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
-  .float-dl:hover svg { transform: translateY(2px); }
-  .float-dl svg { transition: transform 200ms ease; color: var(--color-brand); }
-  .acc-panel {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 280ms ease;
-  }
-  .acc-panel > .acc-panel-inner {
-    overflow: hidden;
-    opacity: 0;
-    transform: translateY(-6px);
-    transition: opacity 220ms ease 40ms, transform 220ms ease 40ms;
-  }
-  .acc-item.open .acc-panel { grid-template-rows: 1fr; }
-  .acc-item.open .acc-panel > .acc-panel-inner {
-    opacity: 1;
-    transform: none;
-  }
-  .acc-item.open .acc-plus { transform: rotate(45deg); }
-  .acc-plus {
-    transition: transform 220ms ease, color 180ms ease, text-shadow 180ms ease;
-    display: inline-block;
-    color: var(--color-brand);
-  }
-  .acc-btn {
-    transition: color 180ms ease;
-  }
-  .acc-btn .acc-q {
-    transition: color 180ms ease, letter-spacing 180ms ease, transform 180ms ease;
-  }
-  .acc-btn:hover .acc-q {
-    color: var(--color-brand);
-    letter-spacing: -0.01em;
-  }
-  .acc-btn:hover .acc-plus {
-    text-shadow: 0 0 18px color-mix(in srgb, var(--color-brand) 55%, transparent);
-  }
-  .acc-item {
-    transition: border-color 180ms ease, background 180ms ease;
-  }
-  .acc-item:hover { border-color: color-mix(in srgb, var(--color-brand) 35%, var(--color-border)); }
-  .acc-item.open {
-    border-color: color-mix(in srgb, var(--color-brand) 45%, var(--color-border));
-  }
-  .text-fx {
-    opacity: 0;
-    transform: translateY(18px);
-    transition: opacity 560ms cubic-bezier(.2,.7,.2,1), transform 560ms cubic-bezier(.2,.7,.2,1);
-  }
-  .text-fx.is-in {
-    opacity: 1;
-    transform: none;
-  }
-  .text-fx-d1 { transition-delay: 60ms; }
-  .text-fx-d2 { transition-delay: 120ms; }
-  .text-fx-d3 { transition-delay: 180ms; }
-  .text-fx-d4 { transition-delay: 240ms; }
-  .text-fx-d5 { transition-delay: 300ms; }
-  .text-fx-d6 { transition-delay: 360ms; }
-  .review-card {
-    transition: border-color 200ms ease, transform 200ms ease, box-shadow 200ms ease;
-  }
-  .review-card:hover {
-    border-color: color-mix(in srgb, var(--color-brand) 40%, var(--color-border));
-    transform: translateY(-2px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.28);
-  }
-  .review-card .review-rate {
-    transition: letter-spacing 200ms ease, text-shadow 200ms ease;
-  }
-  .review-card:hover .review-rate {
-    letter-spacing: 0.18em;
-    text-shadow: 0 0 16px color-mix(in srgb, var(--color-brand) 45%, transparent);
-  }
-  .review-card .review-body {
-    transition: color 200ms ease;
-  }
-  .review-card:hover .review-body { color: var(--color-ink); }
-  .faq-eyebrow {
-    transition: letter-spacing 220ms ease, color 220ms ease;
-  }
-  .faq-title {
-    transition: color 220ms ease, text-shadow 220ms ease;
-  }
-  .faq-title:hover {
-    color: color-mix(in srgb, var(--color-ink) 88%, var(--color-brand));
-    text-shadow: 0 0 28px color-mix(in srgb, var(--color-brand) 22%, transparent);
-  }
-  .table-wrap { overflow-x: auto; border: 1px solid var(--color-border); }
-  table.compare { width: 100%; border-collapse: collapse; min-width: 720px; }
-  table.compare th, table.compare td { padding: 14px 16px; text-align: left; border-bottom: 1px solid var(--color-border); vertical-align: top; }
-  table.compare th { font-family: var(--font-display); font-weight: 700; background: var(--color-soft); }
-  table.compare td:first-child { color: var(--color-muted); width: 24%; }
-  .crumb a { color: var(--color-muted); }
-  .crumb a:hover { color: var(--color-brand); }
+<meta name="google-site-verification" content="uXpC5FQTMEGSE2seWBuEBFcK0k1EqmkMzCY3ef0m74I" />
+<meta name="yandex-verification" content="778a7d3d16530f31" />
+  <meta name="msvalidate.01" content="B63D42C86B056AAA36506A9DDEB48F1E" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags for SEO Optimization -->
+    <title>FL Studio 26.1.3.5570 macOS Full Version Download - Official Setup & Guide</title>
+    <meta name="title" content="FL Studio 26.1.3.5570 macOS Full Version Download - Official Setup & Guide">
+    <meta name="description" content="Download FL Studio 26.1.3.5570 full version for macOS. Experience native Apple Silicon support, advanced workflow enhancements, and seamless music production.">
+    <meta name="keywords" content="FL Studio macOS download, FL Studio 26.1.3.5570, FL Studio for Mac full version, digital audio workstation, music production software">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://flstudio-2026.github.io/">
 
-  .lang-dd { position: relative; }
-  .lang-dd-btn {
-    display: inline-flex; align-items: center; gap: 6px;
-    min-height: 42px; padding: 8px 12px;
-    background: var(--color-soft); color: var(--color-ink);
-    border: 1px solid color-mix(in srgb, var(--color-ink) 22%, transparent);
-    border-radius: 4px; font-family: var(--font-display); font-weight: 700;
-    font-size: 0.8rem; letter-spacing: 0.06em; cursor: pointer;
-  }
-  .lang-dd-btn:hover { border-color: var(--color-brand); color: var(--color-brand); }
-  .lang-dd-btn svg { width: 12px; height: 12px; transition: transform 180ms ease; }
-  .lang-dd.open .lang-dd-btn svg { transform: rotate(180deg); }
-  .lang-dd-menu {
-    display: none; position: absolute; top: calc(100% + 6px); right: 0;
-    min-width: 200px; margin: 0; padding: 6px; list-style: none;
-    background: var(--color-surface); border: 1px solid var(--color-border);
-    border-top: 2px solid var(--color-brand);
-    box-shadow: 0 16px 40px rgba(0,0,0,0.45); z-index: 60;
-  }
-  .lang-dd.open .lang-dd-menu { display: block; }
-  .lang-dd-menu a {
-    display: block; padding: 10px 12px; color: var(--color-ink);
-    font-size: 0.92rem; text-decoration: none; border-radius: 2px;
-  }
-  .lang-dd-menu a:hover { background: var(--color-soft); color: var(--color-brand); }
-  .lang-dd-menu a.is-current { color: var(--color-brand); font-weight: 700; }
-  .lang-mobile {
-    margin-top: 14px; padding-top: 12px;
-    border-top: 1px solid var(--color-border);
-  }
-  .lang-mobile p {
-    font-family: var(--font-display); font-size: 0.72rem; letter-spacing: 0.14em;
-    text-transform: uppercase; color: var(--color-muted); margin-bottom: 4px;
-  }
-  .lang-mobile a { display: block; padding: 8px 0; font-size: 1rem; }
-  .lang-mobile a.is-current { color: var(--color-brand); font-weight: 700; }
-  html[dir="rtl"] .lang-dd-menu { right: auto; left: 0; }
-  html[dir="rtl"] .float-dl {
-    right: auto; left: 24px;
-    border-left: 1px solid var(--color-border);
-    border-right: 2px solid var(--color-brand);
-    padding: 12px 14px 12px 16px;
-  }
-  html[dir="rtl"] .playhead .head { left: auto; right: var(--ph, 18%); }
-  html[dir="rtl"] .page-hero::before { left: auto; right: 12%; }
-  html[dir="rtl"] .page-hero::after { left: auto; right: calc(12% - 5px); }
-  html[dir="rtl"] .skip { left: auto; right: 12px; }
-  html[dir="rtl"] .lb-x { right: auto; left: 18px; }
-  html[dir="rtl"] .header-logo img { object-position: right center; }
-  html[dir="rtl"] .win-bar span { margin-left: 0; margin-right: 8px; }
-  html[lang="zh-CN"] .nav-desktop .nav-a { letter-spacing: 0.06em; }
-  html[lang="zh-CN"] body { letter-spacing: 0.01em; font-family: "Noto Sans SC", var(--font-body), system-ui, sans-serif; }
-  html[lang="zh-CN"] .font-display { font-family: "Noto Sans SC", var(--font-display), system-ui, sans-serif; }
-  html[lang="ru"] .btn-primary, html[lang="ru"] .btn-secondary { padding-inline: 26px; padding-block: 15px; }
-  html[lang="ar"] body { font-family: "Noto Sans Arabic", var(--font-body), system-ui, sans-serif; }
-  html[lang="ar"] .font-display { font-family: "Noto Sans Arabic", var(--font-display), system-ui, sans-serif; }
-  @media (max-width: 640px) {
-    html[dir="rtl"] .float-dl { left: 12px; right: auto; }
-  }
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://flstudio-2026.github.io/">
+    <meta property="og:title" content="FL Studio 26.1.3.5570 macOS Full Version Download">
+    <meta property="og:description" content="Get the ultimate digital audio workstation for macOS. High-definition performance, zero-latency mixing, and robust track arrangements.">
+    <meta property="og:image" content="https://www.image-line.com/wp-content/uploads/2023/05/fl-studio-mac-hero.jpg">
 
-  @media (max-width: 640px) {
-    .float-dl { right: 12px; bottom: 12px; padding: 12px 14px; }
-    .float-meta { display: none; }
-    .hero-home { min-height: 88vh; background-position: 58% center; }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .hero-in { opacity: 1; transform: none; animation: none; }
-    .marquee-track, .creator-track { animation: none; }
-    .btn-primary, .btn-secondary, .float-dl, .btn-primary svg, .float-dl svg { transition: none; }
-    .text-fx { opacity: 1; transform: none; transition: none; }
-    .acc-panel, .acc-panel > .acc-panel-inner, .review-card, .acc-btn .acc-q, .acc-plus, .faq-title { transition: none; }
-    .review-card:hover { transform: none; }
-  }
-</style>
-<script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@graph": [
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://flstudio-2026.github.io/">
+    <meta property="twitter:title" content="FL Studio 26.1.3.5570 macOS Full Version Download">
+    <meta property="twitter:description" content="Get the ultimate digital audio workstation for macOS. High-definition performance, zero-latency mixing, and robust track arrangements.">
+    <meta property="twitter:image" content="https://www.image-line.com/wp-content/uploads/2023/05/fl-studio-mac-hero.jpg">
+
+    <!-- Schema.org Structured Data for Google/Bing Rich Results -->
+    <script type="application/ld+json">
     {
-      "@type": "Organization",
-      "@id": "https://fl-studio.net/#org",
-      "name": "FL Studio",
-      "url": "https://fl-studio.net/",
-      "logo": "https://fl-studio.net/media/brand-mark.png",
-      "description": "Independent download and information resource for FL Studio. Not affiliated with Image-Line Software."
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://fl-studio.net/#site",
-      "name": "FL Studio",
-      "url": "https://fl-studio.net/",
-      "publisher": {
-        "@id": "https://fl-studio.net/#org"
-      }
-    },
-    {
+      "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      "@id": "https://fl-studio.net/#app",
       "name": "FL Studio",
+      "operatingSystem": "macOS 10.15 or later",
       "applicationCategory": "MultimediaApplication",
-      "operatingSystem": "Windows 10, Windows 11, macOS 10.15.7",
-      "softwareVersion": "26.1.4",
-      "url": "https://fl-studio.net/download.html",
-      "image": "https://fl-studio.net/media/release-card.webp",
-      "publisher": {
-        "@id": "https://fl-studio.net/#org"
-      },
       "offers": {
         "@type": "Offer",
-        "url": "https://fl-studio.net/download.html",
-        "availability": "https://schema.org/InStock"
-      }
-    },
-    {
-      "@type": "Review",
-      "itemReviewed": {
-        "@id": "https://fl-studio.net/#app"
+        "price": "0.00",
+        "priceCurrency": "USD"
       },
-      "author": {
-        "@type": "Person",
-        "name": "Maya R."
-      },
-      "reviewBody": "The piano roll note slide and stamp tools are why I stay in FL Studio. Mixer sidechain routing still felt like a maze for the first month.",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "4",
-        "bestRating": "5"
-      }
-    },
-    {
-      "@type": "Review",
-      "itemReviewed": {
-        "@id": "https://fl-studio.net/#app"
-      },
-      "author": {
-        "@type": "Person",
-        "name": "Jordan K."
-      },
-      "reviewBody": "Licensed Producer Edition in 2021 and Lifetime Free Updates carried the same project folder through 26.1.4. Old laptop sessions still open.",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
-      }
-    },
-    {
-      "@type": "Review",
-      "itemReviewed": {
-        "@id": "https://fl-studio.net/#app"
-      },
-      "author": {
-        "@type": "Person",
-        "name": "Luis M."
-      },
-      "reviewBody": "The playlist versus pattern split slowed me for a week. After that, chopping vocals in Edison was faster for the records I mix.",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "4",
-        "bestRating": "5"
-      }
-    },
-    {
-      "@type": "Review",
-      "itemReviewed": {
-        "@id": "https://fl-studio.net/#app"
-      },
-      "author": {
-        "@type": "Person",
-        "name": "Priya S."
-      },
-      "reviewBody": "FLEX Core Series packs covered a client sketch before I reached for paid synths. Browser search gets noisy once a sample drive is huge.",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
-      }
-    },
-    {
-      "@type": "Review",
-      "itemReviewed": {
-        "@id": "https://fl-studio.net/#app"
-      },
-      "author": {
-        "@type": "Person",
-        "name": "Andre W."
-      },
-      "reviewBody": "Signature Bundle was worth it for Gross Beat alone. CPU climbs if Kepler Exo sits on too many sends, so I freeze stems earlier than I did in Live.",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "4",
-        "bestRating": "5"
-      }
+      "url": "https://flstudio-2026.github.io/"
     }
-  ]
-}</script>
-<link rel="stylesheet" href="pulse/shell.css">
-  <meta name="yandex-verification" content="de1f40c872b1abd1" />
+    </script>
+
+    <!-- Custom High-Performance Styling -->
+    <style>
+        :root {
+            --primary-color: #ff6b00;
+            --secondary-color: #121214;
+            --accent-color: #1f1f23;
+            --text-color: #e1e1e6;
+            --text-muted: #a0a0ab;
+            --border-color: #2e2e38;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(135deg, #18181c 0%, #0d0d0f 100%);
+            border-bottom: 1px solid var(--border-color);
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        .hero-section {
+            background: var(--accent-color);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+        .hero-section p {
+            font-size: 1.15rem;
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+        }
+        .img-container {
+            margin: 1.5rem 0;
+        }
+        .img-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 0.85rem 2rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.2s, transform 0.2s;
+            box-shadow: 0 4px 14px rgba(255, 107, 0, 0.4);
+        }
+        .btn:hover {
+            background-color: #e05e00;
+            transform: translateY(-2px);
+        }
+        section {
+            margin-bottom: 2.5rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 0.75rem;
+        }
+        p, li {
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            background: var(--accent-color);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+        th, td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: #18181c;
+            color: #fff;
+        }
+        td {
+            color: var(--text-muted);
+        }
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        @media (max-width: 768px) {
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+            header h1 {
+                font-size: 1.8rem;
+            }
+        }
+        .faq-item {
+            background: var(--accent-color);
+            border: 1px solid var(--border-color);
+            padding: 1.25rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        .faq-item h3 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+    </style>
 </head>
-<body class="page-home deck-home bg-base text-ink font-body antialiased">
+<body>
 
-<a class="skip" href="#main">Skip to content</a>
-<header class="site-header" id="siteHeader">
-  <div class="header-bar top-nav-wrapper mx-auto max-w-[1520px] px-5 lg:px-10">
-    <a href="index.html" class="header-logo brand-lockup min-w-0" aria-label="FL Studio home">
-      <img src="media/brand-mark.png" alt="FL Studio fruit logo on a dark mark" width="160" height="40">
-      <strong>FL STUDIO</strong>
-    </a>
-    <nav class="nav-desktop mid-link-row" aria-label="Primary">
-      <a class="nav-a" href="index.html">Home</a>
-      <a class="nav-a" href="features.html">Features</a>
-      <a class="nav-a" href="download.html">Download</a>
-      <a class="nav-a" href="guides.html">Guides</a>
-      <a class="nav-a" href="faq.html">FAQ</a>
-      <a class="nav-a" href="trust-security.html">Trust &amp; Security</a>
-    </nav>
-    <div class="header-actions util-cluster">
-      <div class="lang-dd" id="langDd">
-        <button type="button" class="lang-dd-btn" id="langDdBtn" aria-expanded="false" aria-haspopup="listbox" aria-label="Language">
-          <span>EN</span>
-          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg>
-        </button>
-        <ul class="lang-dd-menu" id="langDdMenu" role="listbox">
-      <li><a href="index.html" class="is-current" aria-current="page">English (EN)</a></li>
-      <li><a href="ru/index.html">Русский (RU)</a></li>
-      <li><a href="cn/index.html">中文 (CN)</a></li>
-      <li><a href="ar/index.html">العربية (AR)</a></li>
-      <li><a href="sp/index.html">Español (SP)</a></li>
-        </ul>
-      </div>
-      <a class="btn-primary header-dl py-3 px-4 text-sm" href="download.html">Download</a>
-      <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu" data-label-open="Open menu" data-label-close="Close menu">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      </button>
-    </div>
-  </div>
-  <div class="mobile-nav" id="mobileNav">
-    <nav class="flex flex-col gap-1 px-5 py-4 text-lg" aria-label="Mobile">
-      <a href="index.html" class="py-2">Home</a>
-      <a href="features.html" class="py-2">Features</a>
-      <a href="download.html" class="py-2">Download</a>
-      <a href="guides.html" class="py-2">Guides</a>
-      <a href="faq.html" class="py-2">FAQ</a>
-      <a href="trust-security.html" class="py-2">Trust &amp; Security</a>
-      <a class="btn-primary mt-3 justify-center" href="download.html">Download</a>
-      <div class="lang-mobile">
-        <p>Language</p>
-        <a href="index.html" class="is-current" aria-current="page">English (EN)</a>
-        <a href="ru/index.html">Русский (RU)</a>
-        <a href="cn/index.html">中文 (CN)</a>
-        <a href="ar/index.html">العربية (AR)</a>
-        <a href="sp/index.html">Español (SP)</a>
-      </div>
-    </nav>
-  </div>
-</header>
+    <header>
+        <h1>FL Studio 26.1.3.5570 macOS Full Version</h1>
+        <p>Your premier destination for high-end digital audio production on Mac.</p>
+    </header>
 
-<main id="main">
+    <div class="container">
 
-<section class="hero-home stage-hero" id="stageTop">
-  <div class="overlays veil-stack" aria-hidden="true"><div class="ov-dark"></div><div class="ov-warm"></div><div class="ov-vig"></div><div class="ov-copy"></div><div class="ov-grain"></div></div>
-  <div class="stage-copy">
-    <div>
-      <p class="eyebrow hero-in">FL Studio 2026 · 26.1.4</p>
-      <h1 class="hero-in d1"><span>FL Studio</span><em>Built for music.</em></h1>
-      <p class="hero-in d2 mt-6 max-w-[36rem] text-[18px] leading-8 text-ink/85">This FL Studio download page covers version 26.1.4 for Windows and macOS. Lifetime Free Updates continue, FLEX ships with 200+ presets, and the playlist, piano roll, and mixer stay the rooms you already work in.</p>
-      <div class="hero-in d3 mt-8 flex flex-wrap items-center gap-3">
-        <a class="btn-primary" href="download.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 4v12m0 0 4-4m-4 4-4-4M5 19h14"/></svg> Download FL Studio</a>
-        <a class="btn-secondary" href="features.html">Explore features</a>
-      </div>
-      <p class="hero-meta-row hero-in d4 mt-8">Windows / macOS · Latest version · Lifetime Free Updates</p>
-      <p class="hero-in d4 mt-3 font-display text-sm tracking-wide text-ink/70">Windows 26.1.4.5589 · 10 Aug 2026 · 1.03 GB</p>
-    </div>
-  </div>
-</section>
+        <!-- Top Unique Paragraph & Download Call-to-Action -->
+        <div class="hero-section">
+            <p>Unlock the definitive powerhouse of digital music composition with <strong>FL Studio 26.1.3.5570 for macOS</strong>, engineered meticulously to maximize Apple Silicon performance, streamline multi-track audio routing, and deliver ultra-low latency tracking for professional producers and beatmakers alike.</p>
+            
+            <div class="img-container">
+                <img src="https://www.image-line.com/wp-content/uploads/2023/05/fl-studio-mac-hero.jpg" alt="FL Studio macOS High Definition Theme Interface">
+            </div>
 
-<section class="bg-base studio-welcome pb-[min(18vw,9rem)]">
-  <div class="studio-split px-5 lg:px-10">
-  <div>
-    <p class="font-display text-xs tracking-[0.22em] uppercase text-brand">For producers</p>
-    <h2 class="mt-4 font-display text-[clamp(2.2rem,5vw,4.4rem)] font-extrabold leading-[0.95] tracking-[-0.04em]">Welcome home, producers</h2>
-    <p class="mx-auto mt-6 max-w-2xl text-[18px] leading-8 text-muted">FL Studio is a digital audio workstation for writing MIDI, arranging audio, mixing, and mastering. Pattern clips live in the playlist. Notes get edited in the piano roll. The mixer is the routing backbone. This independent FL Studio download page exists so you can check the current Windows and macOS builds before you install.</p>
-    <a class="btn-text mt-6" href="download.html">See the 26.1.4 builds</a>
-  </div>
-  <div>
-    <div class="win product-viz">
-      <div class="win-bar" aria-hidden="true"><i></i><i></i><i></i><span>Playlist · FL Studio</span></div>
-      <video id="homeDemoVideo" class="w-full bg-soft" autoplay muted loop playsinline preload="auto" width="1280" height="720">
-        <source src="media/session-loop.webm" type="video/webm">
-      </video>
-    </div>
-    <p class="mt-3 text-sm text-muted">FL Studio playlist with pattern clips, audio, and automation.</p>
-  </div>
-  </div>
-
-  <div class="mt-16 pt-4">
-    <p class="px-5 text-center text-[15px] text-muted lg:px-10">Some of the creators who use FL Studio</p>
-    <div class="creator-rail mt-8" aria-label="Creators who use FL Studio">
-      <div class="creator-track">
-        <div class="creator-item"><img src="media/pulse-0339f2f874.webp" alt="Portrait of Pluss associated with FL Studio productions" width="44" height="44" loading="lazy"><div><p class="cname">Pluss</p><p class="crole">Producer</p></div></div>
-        <div class="creator-item"><img src="media/pulse-dd5c836a1c.webp" alt="Young Fyre" width="44" height="44" loading="lazy"><div><p class="cname">Young Fyre</p><p class="crole">Producer</p></div></div>
-        <div class="creator-item"><img src="media/pulse-8fede0b449.webp" alt="Martin Garrix" width="44" height="44" loading="lazy"><div><p class="cname">Martin Garrix</p><p class="crole">EDM Producer</p></div></div>
-        <div class="creator-item"><img src="media/pulse-8d5d183c20.webp" alt="Portrait of TM88 associated with FL Studio productions" width="44" height="44" loading="lazy"><div><p class="cname">TM88</p><p class="crole">Trap Producer</p></div></div>
-        <div class="creator-item"><img src="media/pulse-ea0f246435.webp" alt="Portrait of Hopsin associated with FL Studio productions" width="44" height="44" loading="lazy"><div><p class="cname">Hopsin</p><p class="crole">Hip-Hop Artist</p></div></div>
-        <div class="creator-item"><img src="media/pulse-adcf71097c.webp" alt="Twysted Genius" width="44" height="44" loading="lazy"><div><p class="cname">Twysted Genius</p><p class="crole">Producer</p></div></div>
-        <div class="creator-item"><img src="media/pulse-7bdbb75b7e.webp" alt="Porter Robinson" width="44" height="44" loading="lazy"><div><p class="cname">Porter Robinson</p><p class="crole">Electronic Producer</p></div></div>
-        <div class="creator-item"><img src="media/pulse-9caff84c4d.webp" alt="Feed Me / Spor" width="44" height="44" loading="lazy"><div><p class="cname">Feed Me / Spor</p><p class="crole">Producer</p></div></div>
-        <div class="creator-item"><img src="media/pulse-9be1077f4b.webp" alt="Portrait of Bassjackers associated with FL Studio productions" width="44" height="44" loading="lazy"><div><p class="cname">Bassjackers</p><p class="crole">DJ Duo</p></div></div>
-        <div class="creator-item"><img src="media/pulse-f04246e311.webp" alt="Jahlil Beats" width="44" height="44" loading="lazy"><div><p class="cname">Jahlil Beats</p><p class="crole">Producer</p></div></div>
-        <div class="creator-item"><img src="media/pulse-ba271f8c8b.webp" alt="Sonny Digital" width="44" height="44" loading="lazy"><div><p class="cname">Sonny Digital</p><p class="crole">Producer</p></div></div>
-        <div class="creator-item"><img src="media/pulse-13df898b3c.webp" alt="Murda Beatz" width="44" height="44" loading="lazy"><div><p class="cname">Murda Beatz</p><p class="crole">Trap Producer</p></div></div>
-        <div class="creator-item"><img src="media/pulse-af380052be.webp" alt="Foreign Teck" width="44" height="44" loading="lazy"><div><p class="cname">Foreign Teck</p><p class="crole">Producer</p></div></div>
-        <div class="creator-item"><img src="media/pulse-a9bd1db252.webp" alt="30 Roc" width="44" height="44" loading="lazy"><div><p class="cname">30 Roc</p><p class="crole">Producer</p></div></div>
-        <div class="creator-item"><img src="media/pulse-fead809a8d.webp" alt="Portrait of Tungevaag associated with FL Studio productions" width="44" height="44" loading="lazy"><div><p class="cname">Tungevaag</p><p class="crole">DJ/Producer</p></div></div>
-        <div class="creator-item"><img src="media/pulse-83a2fe18f6.webp" alt="Portrait of Dyro associated with FL Studio productions" width="44" height="44" loading="lazy"><div><p class="cname">Dyro</p><p class="crole">DJ/Producer</p></div></div>
-        <div class="creator-item"><img src="media/pulse-60493a8e57.webp" alt="Portrait of Skimmy associated with FL Studio productions" width="44" height="44" loading="lazy"><div><p class="cname">Skimmy</p><p class="crole">Producer</p></div></div>
-        <div class="creator-item"><img src="media/pulse-b96c19b14d.webp" alt="Portrait of LeriQ associated with FL Studio productions" width="44" height="44" loading="lazy"><div><p class="cname">LeriQ</p><p class="crole">Producer</p></div></div>
-        <div class="creator-item"><img src="media/pulse-c1bbbb2188.webp" alt="Diego Ave" width="44" height="44" loading="lazy"><div><p class="cname">Diego Ave</p><p class="crole">Producer</p></div></div>
-        <div class="creator-item"><img src="media/pulse-e6dae99059.webp" alt="Good Times Ahead" width="44" height="44" loading="lazy"><div><p class="cname">Good Times Ahead</p><p class="crole">DJ Duo</p></div></div>
-        <div class="creator-item"><img src="media/pulse-61489ac269.webp" alt="Portrait of Basshunter associated with FL Studio productions" width="44" height="44" loading="lazy"><div><p class="cname">Basshunter</p><p class="crole">Producer</p></div></div>
-        <div class="creator-item"><img src="media/pulse-54c4c4d3cd.webp" alt="Matthew Burnett" width="44" height="44" loading="lazy"><div><p class="cname">Matthew Burnett</p><p class="crole">Producer</p></div></div>
-        <div class="creator-item"><img src="media/pulse-46b485f976.webp" alt="Portrait of Arty associated with FL Studio productions" width="44" height="44" loading="lazy"><div><p class="cname">Arty</p><p class="crole">Producer</p></div></div>
-        <div class="creator-item"><img src="media/pulse-a5ad312e5b.webp" alt="Portrait of T-Minus associated with FL Studio productions" width="44" height="44" loading="lazy"><div><p class="cname">T-Minus</p><p class="crole">Producer</p></div></div>
-        <div class="creator-item"><img src="media/pulse-962df1e852.webp" alt="Portrait of Kel-P associated with FL Studio productions" width="44" height="44" loading="lazy"><div><p class="cname">Kel-P</p><p class="crole">Producer</p></div></div>
-        <div class="creator-item"><img src="media/pulse-702641e6ba.webp" alt="9th Wonder" width="44" height="44" loading="lazy"><div><p class="cname">9th Wonder</p><p class="crole">Hip-Hop Producer</p></div></div>
-        <div class="creator-item"><img src="media/pulse-1175590b72.webp" alt="Lex Luger" width="44" height="44" loading="lazy"><div><p class="cname">Lex Luger</p><p class="crole">Trap Pioneer</p></div></div>
-        <div class="creator-item"><img src="media/pulse-661feb1d79.webp" alt="Portrait of Tritonal associated with FL Studio productions" width="44" height="44" loading="lazy"><div><p class="cname">Tritonal</p><p class="crole">DJ Duo</p></div></div>
-        <div class="creator-item"><img src="media/pulse-b088b198d7.jpg" alt="Portrait of Mustard associated with FL Studio productions" width="44" height="44" loading="lazy"><div><p class="cname">Mustard</p><p class="crole">Producer</p></div></div>
-        <div class="creator-item"><img src="media/pulse-dbee70411b.jpg" alt="Portrait of Boi-1da associated with FL Studio productions" width="44" height="44" loading="lazy"><div><p class="cname">Boi-1da</p><p class="crole">Producer</p></div></div>
-        <!-- duplicate set for continuous loop -->
-        <div class="creator-item" aria-hidden="true"><img src="media/pulse-0339f2f874.webp" alt="" width="44" height="44" loading="lazy"><div><p class="cname">Pluss</p><p class="crole">Producer</p></div></div>
-        <div class="creator-item" aria-hidden="true"><img src="media/pulse-dd5c836a1c.webp" alt="" width="44" height="44" loading="lazy"><div><p class="cname">Young Fyre</p><p class="crole">Producer</p></div></div>
-        <div class="creator-item" aria-hidden="true"><img src="media/pulse-8fede0b449.webp" alt="" width="44" height="44" loading="lazy"><div><p class="cname">Martin Garrix</p><p class="crole">EDM Producer</p></div></div>
-        <div class="creator-item" aria-hidden="true"><img src="media/pulse-8d5d183c20.webp" alt="" width="44" height="44" loading="lazy"><div><p class="cname">TM88</p><p class="crole">Trap Producer</p></div></div>
-        <div class="creator-item" aria-hidden="true"><img src="media/pulse-ea0f246435.webp" alt="" width="44" height="44" loading="lazy"><div><p class="cname">Hopsin</p><p class="crole">Hip-Hop Artist</p></div></div>
-        <div class="creator-item" aria-hidden="true"><img src="media/pulse-adcf71097c.webp" alt="" width="44" height="44" loading="lazy"><div><p class="cname">Twysted Genius</p><p class="crole">Producer</p></div></div>
-        <div class="creator-item" aria-hidden="true"><img src="media/pulse-7bdbb75b7e.webp" alt="" width="44" height="44" loading="lazy"><div><p class="cname">Porter Robinson</p><p class="crole">Electronic Producer</p></div></div>
-        <div class="creator-item" aria-hidden="true"><img src="media/pulse-9caff84c4d.webp" alt="" width="44" height="44" loading="lazy"><div><p class="cname">Feed Me / Spor</p><p class="crole">Producer</p></div></div>
-        <div class="creator-item" aria-hidden="true"><img src="media/pulse-9be1077f4b.webp" alt="" width="44" height="44" loading="lazy"><div><p class="cname">Bassjackers</p><p class="crole">DJ Duo</p></div></div>
-        <div class="creator-item" aria-hidden="true"><img src="media/pulse-f04246e311.webp" alt="" width="44" height="44" loading="lazy"><div><p class="cname">Jahlil Beats</p><p class="crole">Producer</p></div></div>
-        <div class="creator-item" aria-hidden="true"><img src="media/pulse-ba271f8c8b.webp" alt="" width="44" height="44" loading="lazy"><div><p class="cname">Sonny Digital</p><p class="crole">Producer</p></div></div>
-        <div class="creator-item" aria-hidden="true"><img src="media/pulse-13df898b3c.webp" alt="" width="44" height="44" loading="lazy"><div><p class="cname">Murda Beatz</p><p class="crole">Trap Producer</p></div></div>
-        <div class="creator-item" aria-hidden="true"><img src="media/pulse-af380052be.webp" alt="" width="44" height="44" loading="lazy"><div><p class="cname">Foreign Teck</p><p class="crole">Producer</p></div></div>
-        <div class="creator-item" aria-hidden="true"><img src="media/pulse-a9bd1db252.webp" alt="" width="44" height="44" loading="lazy"><div><p class="cname">30 Roc</p><p class="crole">Producer</p></div></div>
-        <div class="creator-item" aria-hidden="true"><img src="media/pulse-fead809a8d.webp" alt="" width="44" height="44" loading="lazy"><div><p class="cname">Tungevaag</p><p class="crole">DJ/Producer</p></div></div>
-        <div class="creator-item" aria-hidden="true"><img src="media/pulse-83a2fe18f6.webp" alt="" width="44" height="44" loading="lazy"><div><p class="cname">Dyro</p><p class="crole">DJ/Producer</p></div></div>
-        <div class="creator-item" aria-hidden="true"><img src="media/pulse-60493a8e57.webp" alt="" width="44" height="44" loading="lazy"><div><p class="cname">Skimmy</p><p class="crole">Producer</p></div></div>
-        <div class="creator-item" aria-hidden="true"><img src="media/pulse-b96c19b14d.webp" alt="" width="44" height="44" loading="lazy"><div><p class="cname">LeriQ</p><p class="crole">Producer</p></div></div>
-        <div class="creator-item" aria-hidden="true"><img src="media/pulse-c1bbbb2188.webp" alt="" width="44" height="44" loading="lazy"><div><p class="cname">Diego Ave</p><p class="crole">Producer</p></div></div>
-        <div class="creator-item" aria-hidden="true"><img src="media/pulse-e6dae99059.webp" alt="" width="44" height="44" loading="lazy"><div><p class="cname">Good Times Ahead</p><p class="crole">DJ Duo</p></div></div>
-        <div class="creator-item" aria-hidden="true"><img src="media/pulse-61489ac269.webp" alt="" width="44" height="44" loading="lazy"><div><p class="cname">Basshunter</p><p class="crole">Producer</p></div></div>
-        <div class="creator-item" aria-hidden="true"><img src="media/pulse-54c4c4d3cd.webp" alt="" width="44" height="44" loading="lazy"><div><p class="cname">Matthew Burnett</p><p class="crole">Producer</p></div></div>
-        <div class="creator-item" aria-hidden="true"><img src="media/pulse-46b485f976.webp" alt="" width="44" height="44" loading="lazy"><div><p class="cname">Arty</p><p class="crole">Producer</p></div></div>
-        <div class="creator-item" aria-hidden="true"><img src="media/pulse-a5ad312e5b.webp" alt="" width="44" height="44" loading="lazy"><div><p class="cname">T-Minus</p><p class="crole">Producer</p></div></div>
-        <div class="creator-item" aria-hidden="true"><img src="media/pulse-962df1e852.webp" alt="" width="44" height="44" loading="lazy"><div><p class="cname">Kel-P</p><p class="crole">Producer</p></div></div>
-        <div class="creator-item" aria-hidden="true"><img src="media/pulse-702641e6ba.webp" alt="" width="44" height="44" loading="lazy"><div><p class="cname">9th Wonder</p><p class="crole">Hip-Hop Producer</p></div></div>
-        <div class="creator-item" aria-hidden="true"><img src="media/pulse-1175590b72.webp" alt="" width="44" height="44" loading="lazy"><div><p class="cname">Lex Luger</p><p class="crole">Trap Pioneer</p></div></div>
-        <div class="creator-item" aria-hidden="true"><img src="media/pulse-661feb1d79.webp" alt="" width="44" height="44" loading="lazy"><div><p class="cname">Tritonal</p><p class="crole">DJ Duo</p></div></div>
-        <div class="creator-item" aria-hidden="true"><img src="media/pulse-b088b198d7.jpg" alt="" width="44" height="44" loading="lazy"><div><p class="cname">Mustard</p><p class="crole">Producer</p></div></div>
-        <div class="creator-item" aria-hidden="true"><img src="media/pulse-dbee70411b.jpg" alt="" width="44" height="44" loading="lazy"><div><p class="cname">Boi-1da</p><p class="crole">Producer</p></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<p class="giant-type" aria-hidden="true">CREATE.</p>
-<div class="wave-fade" aria-hidden="true"></div>
-
-<section class="bg-soft py-[min(18vw,9rem)]">
-  <div class="mx-auto grid max-w-[1520px] items-end gap-12 px-5 lg:grid-cols-12 lg:px-10">
-    <div class="lg:col-span-7">
-      <p class="font-display text-xs tracking-[0.22em] uppercase text-brand">Why people stay</p>
-      <h2 class="mt-4 font-display text-[clamp(2.1rem,4.5vw,4rem)] font-extrabold leading-[0.95] tracking-[-0.04em]">Lifetime Free Updates is the contract</h2>
-      <p class="mt-6 max-w-xl text-[18px] leading-8 text-muted">Buy an FL Studio edition once and later 26.x installers stay in that license family. Version 26.1.4.5589 (Windows, 10 Aug 2026, 1.03 GB) is the current build this site documents. You are not buying a one-year DAW seat.</p>
-      <a class="btn-text mt-6" href="faq.html">How the license works</a>
-    </div>
-    <div class="lg:col-span-5">
-      <div class="border-t border-border py-8">
-        <h3 class="font-display text-2xl font-bold tracking-[-0.03em]">Start on the grid</h3>
-        <p class="mt-3 text-[17px] leading-7 text-muted">Channel rack steps, piano roll notes, then playlist clips. Most people write a loop in minutes without building a session template first.</p>
-      </div>
-      <div class="border-t border-border py-8">
-        <h3 class="font-display text-2xl font-bold tracking-[-0.03em]">Deep tool set when you need it</h3>
-        <p class="mt-3 text-[17px] leading-7 text-muted">All Plugins Edition includes 117 plugins. Harmor, Sakura, Luxeverb, Ogun, and Kepler Exo sit next to Edison, Slicex, and Gross Beat depending on edition.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<p class="giant-type" aria-hidden="true">MIX.</p>
-<div class="wave-fade" aria-hidden="true"></div>
-
-<section id="choose-edition" class="bg-soft py-[min(16vw,8rem)]">
-  <div class="mx-auto grid max-w-[1520px] gap-14 px-5 lg:grid-cols-12 lg:items-start lg:gap-16 lg:px-10">
-    <div class="lg:col-span-5">
-      <div class="border-b border-border py-8 first:pt-0">
-        <h2 class="font-display text-[clamp(1.7rem,3vw,2.4rem)] font-extrabold tracking-[-0.03em]">Start creating today</h2>
-        <p class="mt-3 text-[17px] leading-7 text-muted">Build beats, sketch melodies, and arrange full songs quickly with tools designed for every kind of creator.</p>
-      </div>
-      <div class="border-b border-border py-8">
-        <h3 class="font-display text-[clamp(1.7rem,3vw,2.4rem)] font-extrabold tracking-[-0.03em]">As deep as your ideas</h3>
-        <p class="mt-3 text-[17px] leading-7 text-muted">FL Studio is packed with 100+ instruments, effects, tools and sounds. Get more plugins with upgrades once you are ready.</p>
-      </div>
-      <div class="border-b border-border py-8">
-        <h3 class="font-display text-[clamp(1.7rem,3vw,2.4rem)] font-extrabold tracking-[-0.03em]">Lifetime Free Updates</h3>
-        <p class="mt-3 text-[17px] leading-7 text-muted">Fair pricing that lasts: you get updates, improvements, and the latest features for your Edition for free, for life.</p>
-      </div>
-      <p class="mt-6 text-[15px] text-muted">For more information, see the <a class="underline decoration-brand/70 underline-offset-4" href="#editions">edition comparison</a>.</p>
-    </div>
-
-    <div class="lg:col-span-7">
-      <h3 class="font-display text-2xl font-bold tracking-[-0.02em]">Choose your Edition</h3>
-      <div class="mt-6 space-y-3" id="editionPicker" role="radiogroup" aria-label="FL Studio editions">
-        <button type="button" class="edition-pick" role="radio" aria-checked="false" data-edition="fruity" data-price="$99" data-label="Fruity Edition">
-          <span class="edition-radio" aria-hidden="true"></span>
-          <span class="flex-1">
-            <span class="flex items-start justify-between gap-4">
-              <span class="font-display text-[17px] font-bold">Fruity Edition</span>
-              <span class="font-display text-[17px] font-bold shrink-0">$99</span>
-            </span>
-            <span class="edition-detail">Lifetime FL Studio license with the MIDI and pattern workflow. Piano roll, channel rack, and playlist for instrument work. No audio recording.</span>
-          </span>
-        </button>
-
-        <button type="button" class="edition-pick is-active" role="radio" aria-checked="true" data-edition="producer" data-price="$179" data-label="Producer Edition">
-          <span class="edition-radio" aria-hidden="true"></span>
-          <span class="flex-1">
-            <span class="flex items-start justify-between gap-4">
-              <span class="font-display text-[17px] font-bold">Producer Edition <span class="edition-badge">MOST POPULAR</span></span>
-              <span class="font-display text-[17px] font-bold shrink-0">$179</span>
-            </span>
-            <span class="edition-detail">Lifetime FL Studio license + 93 instruments and effects, includes audio recording and stem separation. + Get 2 million extra sounds free for 3 months. <a class="text-brand underline underline-offset-2" href="features.html#cloud">Learn more</a></span>
-          </span>
-        </button>
-
-        <button type="button" class="edition-pick" role="radio" aria-checked="false" data-edition="signature" data-price="$269" data-label="Signature Bundle">
-          <span class="edition-radio" aria-hidden="true"></span>
-          <span class="flex-1">
-            <span class="flex items-start justify-between gap-4">
-              <span class="font-display text-[17px] font-bold">Signature Bundle</span>
-              <span class="font-display text-[17px] font-bold shrink-0">$269</span>
-            </span>
-            <span class="edition-detail">Producer Edition tools plus Gross Beat, NewTone, Harmless, and ten more plugins for time, pitch, and sound design work.</span>
-          </span>
-        </button>
-
-        <button type="button" class="edition-pick" role="radio" aria-checked="false" data-edition="all" data-price="$449" data-label="All Plugins Edition">
-          <span class="edition-radio" aria-hidden="true"></span>
-          <span class="flex-1">
-            <span class="flex items-start justify-between gap-4">
-              <span class="font-display text-[17px] font-bold">All Plugins Edition</span>
-              <span class="font-display text-[17px] font-bold shrink-0">$449</span>
-            </span>
-            <span class="edition-detail">The full native set: 117 plugins including Kepler Exo, Harmor, Sakura, Luxeverb, and Ogun, with Lifetime Free Updates for this edition.</span>
-          </span>
-        </button>
-      </div>
-
-      <a id="editionBuyBtn" class="btn-primary mt-6 w-full justify-center" href="#">Buy Producer Edition</a>
-      <a class="btn-secondary mt-3 w-full justify-center" href="#editions">Compare Editions</a>
-
-      <div class="pay-row" aria-label="Common payment methods">
-        <span class="pay-chip">AMEX</span>
-        <span class="pay-chip">PayPal</span>
-        <span class="pay-chip">JCB</span>
-        <span class="pay-chip">VISA</span>
-        <span class="pay-chip">Klarna</span>
-        <span class="pay-chip">Mastercard</span>
-      </div>
-      <p class="mt-3 text-center text-xs leading-5 text-muted">Some payment plans might only be available in certain regions. Purchase links stay on this site as placeholders until a checkout URL is attached.</p>
-    </div>
-  </div>
-</section>
-
-<p class="giant-type" aria-hidden="true">MASTER.</p>
-<div class="wave-fade" aria-hidden="true"></div>
-
-<section id="editions" class="bg-base edition-strip py-[min(18vw,9rem)]">
-  <div class="mx-auto max-w-[1520px] px-5 lg:px-10">
-    <p class="font-display text-xs tracking-[0.22em] uppercase text-brand">Editions</p>
-    <h2 class="mt-4 max-w-3xl font-display text-[clamp(2.1rem,4.5vw,3.8rem)] font-extrabold leading-[0.95] tracking-[-0.04em]">One installer. The license picks the tools.</h2>
-    <p class="mt-5 max-w-2xl text-[18px] leading-8 text-muted">The Windows and macOS download is the same FL Studio application. Your edition key decides whether audio recording and the larger plugin set are available. Compare rows, then read the full breakdown on <a class="underline decoration-brand/60" href="features.html#editions">Features</a>.</p>
-  </div>
-  <div class="mx-auto mt-14 max-w-[1520px] divide-y divide-border border-y border-border">
-    <article class="grid items-center gap-8 px-5 py-10 lg:grid-cols-12 lg:px-10">
-      <div class="lg:col-span-2"><img class="js-lb w-24" src="media/tier-alpha.png" alt="Fruity Edition badge for FL Studio" width="180" height="180" loading="lazy"></div>
-      <div class="lg:col-span-3"><h3 class="font-display text-2xl font-bold">Fruity Edition</h3><p class="mt-2 text-muted">MIDI and pattern workflow. No audio recording.</p></div>
-      <p class="lg:col-span-7 text-[17px] leading-7 text-muted">Step sequencer, piano roll, and playlist for instrument and MIDI work. Choose this only if you never need to record a microphone, guitar, or stem.</p>
-    </article>
-    <article class="grid items-center gap-8 px-5 py-10 lg:grid-cols-12 lg:px-10">
-      <div class="lg:col-span-2"><img class="js-lb w-24" src="media/tier-beta.png" alt="Producer Edition badge for FL Studio" width="180" height="180" loading="lazy"></div>
-      <div class="lg:col-span-3"><h3 class="font-display text-2xl font-bold">Producer Edition</h3><p class="mt-2 text-muted">The usual working license.</p></div>
-      <p class="lg:col-span-7 text-[17px] leading-7 text-muted">Audio recording, Edison, Kepler, Slicex, and Automation Clips. This is the edition most people mean when they say they produce in FL Studio.</p>
-    </article>
-    <article class="grid items-center gap-8 px-5 py-10 lg:grid-cols-12 lg:px-10">
-      <div class="lg:col-span-2"><img class="js-lb w-24" src="media/tier-gamma.png" alt="Signature Bundle badge for FL Studio" width="180" height="180" loading="lazy"></div>
-      <div class="lg:col-span-3"><h3 class="font-display text-2xl font-bold">Signature Bundle</h3><p class="mt-2 text-muted">Producer tools plus extras.</p></div>
-      <p class="lg:col-span-7 text-[17px] leading-7 text-muted">Gross Beat, NewTone, Harmless, and ten additional plugins on top of Producer Edition. Time-based effects and pitch editing without a second shopping list.</p>
-    </article>
-    <article class="grid items-center gap-8 px-5 py-10 lg:grid-cols-12 lg:px-10">
-      <div class="lg:col-span-2"><img class="js-lb w-24" src="media/tier-delta.png" alt="All Plugins Edition badge for FL Studio" width="180" height="180" loading="lazy"></div>
-      <div class="lg:col-span-3"><h3 class="font-display text-2xl font-bold">All Plugins Edition</h3><p class="mt-2 text-muted">117 plugins.</p></div>
-      <p class="lg:col-span-7 text-[17px] leading-7 text-muted">Kepler Exo, Harmor, Sakura, Luxeverb, Ogun, and the rest of the Image-Line set. One license instead of collecting plugins one by one.</p>
-    </article>
-  </div>
-</section>
-
-<p class="giant-type" aria-hidden="true">PERFORM.</p>
-<div class="wave-fade" aria-hidden="true"></div>
-
-<section class="hits-section" id="behind-the-hits">
-  <div class="hits-head">
-    <h2>Behind the hits,<br>there's FL Studio</h2>
-    <p>Some of the biggest songs in the world started in FL Studio. Yours can too.</p>
-  </div>
-  <div class="hits-gallery-wrap">
-    <div class="hits-gallery" id="hitsGallery" style="--hits-n:7" aria-label="Songs and artists associated with FL Studio">
-    <div class="hits-column hits-column-1">
-      <button type="button" class="hits-item" data-hits-open data-src="media/pulse-1bab170de0.png" data-title="How Low" data-artist="Ludacris" data-producer="Produced by T-Minus" aria-label="Open details for How Low by Ludacris">
-        <img src="media/pulse-1bab170de0.png" alt="Artwork for How Low by Ludacris, a record associated with FL Studio" width="300" height="300" decoding="async">
-        <span class="hits-overlay"><strong>How Low</strong><span>Ludacris</span></span>
-      </button>
-      <button type="button" class="hits-item" data-hits-open data-src="media/pulse-c2f658e887.png" data-title="I Had Some Help" data-artist="Post Malone, Morgan Wallen" data-producer="Produced by Louis Bell, Charlie Handsome, and Hoskins" aria-label="Open details for I Had Some Help by Post Malone, Morgan Wallen">
-        <img src="media/pulse-c2f658e887.png" alt="Artwork for I Had Some Help by Post Malone, Morgan Wallen, a record associated with FL Studio" width="300" height="300" decoding="async" loading="lazy">
-        <span class="hits-overlay"><strong>I Had Some Help</strong><span>Post Malone, Morgan Wallen</span></span>
-      </button>
-    </div>
-    <div class="hits-column hits-column-2">
-      <button type="button" class="hits-item" data-hits-open data-src="media/pulse-3d348bd188.jpg" data-title="Do It To It" data-artist="ACRAZE" data-producer="" aria-label="Open details for Do It To It by ACRAZE">
-        <img src="media/pulse-3d348bd188.jpg" alt="Artwork for Do It To It by ACRAZE, a record associated with FL Studio" width="300" height="300" decoding="async">
-        <span class="hits-overlay"><strong>Do It To It</strong><span>ACRAZE</span></span>
-      </button>
-      <button type="button" class="hits-item" data-hits-open data-src="media/pulse-4ff6eab916.jpg" data-title="Music Sessions #53" data-artist="Shakira, Bizarrap" data-producer="Produced by Bizarrap" aria-label="Open details for Music Sessions #53 by Shakira, Bizarrap">
-        <img src="media/pulse-4ff6eab916.jpg" alt="Artwork for Music Sessions #53 by Shakira, Bizarrap, a record associated with FL Studio" width="300" height="300" decoding="async" loading="lazy">
-        <span class="hits-overlay"><strong>Music Sessions #53</strong><span>Shakira, Bizarrap</span></span>
-      </button>
-    </div>
-    <div class="hits-column hits-column-3">
-      <button type="button" class="hits-item" data-hits-open data-src="media/pulse-2ec55e2860.jpg" data-title="Shelter" data-artist="Porter Robinson and Madeon" data-producer="" aria-label="Open details for Shelter by Porter Robinson and Madeon">
-        <img src="media/pulse-2ec55e2860.jpg" alt="Artwork for Shelter by Porter Robinson and Madeon, a record associated with FL Studio" width="300" height="300" decoding="async">
-        <span class="hits-overlay"><strong>Shelter</strong><span>Porter Robinson and Madeon</span></span>
-      </button>
-      <button type="button" class="hits-item" data-hits-open data-src="media/pulse-5b653d9487.jpg" data-title="Formation" data-artist="Beyonce" data-producer="Produced by Mike Will Made It, Pluss, Swae Lee" aria-label="Open details for Formation by Beyonce">
-        <img src="media/pulse-5b653d9487.jpg" alt="Artwork for Formation by Beyonce, a record associated with FL Studio" width="300" height="300" decoding="async" loading="lazy">
-        <span class="hits-overlay"><strong>Formation</strong><span>Beyonce</span></span>
-      </button>
-      <button type="button" class="hits-item" data-hits-open data-src="media/pulse-db40be2335.jpg" data-title="Black Beatles" data-artist="Rae Sremmurd, Gucci Mane" data-producer="Produced by Mike Will Made It" aria-label="Open details for Black Beatles by Rae Sremmurd, Gucci Mane">
-        <img src="media/pulse-db40be2335.jpg" alt="Artwork for Black Beatles by Rae Sremmurd, Gucci Mane, a record associated with FL Studio" width="300" height="300" decoding="async" loading="lazy">
-        <span class="hits-overlay"><strong>Black Beatles</strong><span>Rae Sremmurd, Gucci Mane</span></span>
-      </button>
-    </div>
-    <div class="hits-column hits-column-4">
-      <button type="button" class="hits-item" data-hits-open data-src="media/pulse-eb19e55190.jpg" data-title="Wake Me Up" data-artist="Avicii" data-producer="" aria-label="Open details for Wake Me Up by Avicii">
-        <img src="media/pulse-eb19e55190.jpg" alt="Artwork for Wake Me Up by Avicii, a record associated with FL Studio" width="300" height="300" decoding="async">
-        <span class="hits-overlay"><strong>Wake Me Up</strong><span>Avicii</span></span>
-      </button>
-      <button type="button" class="hits-item" data-hits-open data-src="media/pulse-bf005e400b.jpg" data-title="Congratulations" data-artist="Post Malone" data-producer="Produced by Metro Boomin" aria-label="Open details for Congratulations by Post Malone">
-        <img src="media/pulse-bf005e400b.jpg" alt="Artwork for Congratulations by Post Malone, a record associated with FL Studio" width="300" height="300" decoding="async" loading="lazy">
-        <span class="hits-overlay"><strong>Congratulations</strong><span>Post Malone</span></span>
-      </button>
-    </div>
-    <div class="hits-column hits-column-5">
-      <button type="button" class="hits-item" data-hits-open data-src="media/pulse-9b5ac8dc66.jpg" data-title="Sicko Mode" data-artist="Travis Scott" data-producer="Produced by Tay Keith, Hit-Boy and OZ" aria-label="Open details for Sicko Mode by Travis Scott">
-        <img src="media/pulse-9b5ac8dc66.jpg" alt="Artwork for Sicko Mode by Travis Scott, a record associated with FL Studio" width="300" height="300" decoding="async">
-        <span class="hits-overlay"><strong>Sicko Mode</strong><span>Travis Scott</span></span>
-      </button>
-    </div>
-    <div class="hits-column hits-column-6">
-      <button type="button" class="hits-item" data-hits-open data-src="media/pulse-81b0c8bc3a.jpg" data-title="Inolvidable" data-artist="Beele, Ovy on the Drums" data-producer="Produced by Ovy on the Drums" aria-label="Open details for Inolvidable by Beele, Ovy on the Drums">
-        <img src="media/pulse-81b0c8bc3a.jpg" alt="Artwork for Inolvidable by Beele, Ovy on the Drums, a record associated with FL Studio" width="300" height="300" decoding="async">
-        <span class="hits-overlay"><strong>Inolvidable</strong><span>Beele, Ovy on the Drums</span></span>
-      </button>
-      <button type="button" class="hits-item" data-hits-open data-src="media/pulse-fe14db2bca.jpg" data-title="Old Town Road" data-artist="Lil Nas X" data-producer="Produced by YoungKio" aria-label="Open details for Old Town Road by Lil Nas X">
-        <img src="media/pulse-fe14db2bca.jpg" alt="Artwork for Old Town Road by Lil Nas X, a record associated with FL Studio" width="300" height="300" decoding="async" loading="lazy">
-        <span class="hits-overlay"><strong>Old Town Road</strong><span>Lil Nas X</span></span>
-      </button>
-    </div>
-    <div class="hits-column hits-column-7">
-      <button type="button" class="hits-item" data-hits-open data-src="media/pulse-60bb6a16cf.png" data-title="Ahora Me Llama" data-artist="Karol G, Bad Bunny" data-producer="Produced by Ovy on the Drums, Chris Jedi, Gaby Music" aria-label="Open details for Ahora Me Llama by Karol G, Bad Bunny">
-        <img src="media/pulse-60bb6a16cf.png" alt="Artwork for Ahora Me Llama by Karol G, Bad Bunny, a record associated with FL Studio" width="300" height="300" decoding="async">
-        <span class="hits-overlay"><strong>Ahora Me Llama</strong><span>Karol G, Bad Bunny</span></span>
-      </button>
-      <button type="button" class="hits-item" data-hits-open data-src="media/pulse-af839dd022.png" data-title="Humble" data-artist="Kendrick Lamar" data-producer="Produced by Mike Will Made It and Pluss" aria-label="Open details for Humble by Kendrick Lamar">
-        <img src="media/pulse-af839dd022.png" alt="Artwork for Humble by Kendrick Lamar, a record associated with FL Studio" width="300" height="300" decoding="async" loading="lazy">
-        <span class="hits-overlay"><strong>Humble</strong><span>Kendrick Lamar</span></span>
-      </button>
-      <button type="button" class="hits-item" data-hits-open data-src="media/pulse-dc93346815.jpeg" data-title="Crank That" data-artist="Soulja Boy" data-producer="" aria-label="Open details for Crank That by Soulja Boy">
-        <img src="media/pulse-dc93346815.jpeg" alt="Artwork for Crank That by Soulja Boy, a record associated with FL Studio" width="300" height="298" decoding="async" loading="lazy">
-        <span class="hits-overlay"><strong>Crank That</strong><span>Soulja Boy</span></span>
-      </button>
-    </div>
-    </div>
-  </div>
-</section>
-
-<div class="hits-modal" id="hitsModal" aria-hidden="true">
-  <div class="hits-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="hitsModalTitle" tabindex="-1">
-    <button type="button" class="hits-modal-close" id="hitsModalClose" aria-label="Close song details">&times;</button>
-    <div class="hits-modal-grid">
-      <img id="hitsModalImg" src="" alt="">
-      <div class="hits-modal-copy">
-        <h3 id="hitsModalTitle"></h3>
-        <p class="hits-artist" id="hitsModalArtist"></p>
-        <p class="hits-producer" id="hitsModalProducer" hidden></p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<p class="giant-type" aria-hidden="true">ARRANGE.</p>
-<div class="wave-fade" aria-hidden="true"></div>
-
-<section id="community" class="bg-base py-[min(16vw,8rem)]">
-  <div class="mx-auto max-w-[900px] px-5 text-center lg:px-10">
-    <h2 class="font-display text-[clamp(2.2rem,5vw,4rem)] font-extrabold leading-[0.95] tracking-[-0.04em]">Millions of creators.<br>One community.</h2>
-    <p class="mx-auto mt-5 max-w-2xl text-[17px] leading-8 text-muted">With one of the largest and most active music communities online, it is easy to learn, improve, and share your sound.</p>
-  </div>
-
-  <div class="community-masonry mx-auto mt-12 max-w-[1520px] px-5 lg:px-10">
-    <article class="c-card c-card-media">
-      <img class="js-lb" src="media/pulse-d9889350c5.jpg" alt="Producers working at a large mixing console and MIDI keyboard" width="900" height="1200" loading="lazy">
-      <div class="c-cap"><strong>Studio sessions</strong><span>FL Studio Power User</span></div>
-    </article>
-
-    <article class="c-card c-card-quote">
-      <p>FL Studio means everything to my productions. It is the only program I do not get bored of.</p>
-      <div class="c-person">
-        <img src="media/pulse-3af40cb80e.jpg" alt="Portrait of WondaGurl associated with FL Studio productions" width="36" height="36" loading="lazy">
-        <div><strong>WondaGurl</strong><span>Grammy Nominee</span></div>
-      </div>
-    </article>
-
-    <article class="c-card c-card-media">
-      <video class="community-vid" muted playsinline preload="metadata" poster="media/session-still.webp">
-        <source src="media/session-loop.webm" type="video/webm">
-      </video>
-      <button type="button" class="c-play" aria-label="Play playlist demo">
-        <svg viewBox="0 0 64 64" fill="currentColor" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="rgba(255,255,255,0.92)"/><path d="M26 20v24l20-12z" fill="#111"/></svg>
-      </button>
-      <div class="c-cap"><strong>Playlist workflow</strong><span>FL Studio demo</span></div>
-    </article>
-
-    <article class="c-card c-card-quote">
-      <p>I have been using FL Studio for 13 or 14 years. I love my FL Studio.</p>
-      <div class="c-person">
-        <img src="media/pulse-ca73bb3dbf.jpg" alt="Murda Beatz" width="36" height="36" loading="lazy">
-        <div><strong>Murda Beatz</strong><span>Grammy Nominee</span></div>
-      </div>
-    </article>
-
-    <article class="c-card c-card-media">
-      <video class="community-vid" muted playsinline preload="metadata" poster="media/release-card.webp">
-        <source src="media/pulse-3d412492c7.mp4" type="video/mp4">
-      </video>
-      <button type="button" class="c-play" aria-label="Play Hit-Boy trophies beat breakdown">
-        <svg viewBox="0 0 64 64" fill="currentColor" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="rgba(255,255,255,0.92)"/><path d="M26 20v24l20-12z" fill="#111"/></svg>
-      </button>
-      <div class="c-cap"><strong>Hit-Boy</strong><span>FL Studio Power User</span></div>
-    </article>
-
-    <article class="c-card c-card-quote">
-      <p>This new FL Studio update is dope.</p>
-      <div class="c-person">
-        <img src="media/pulse-b088b198d7.jpg" alt="Portrait of Mustard associated with FL Studio productions" width="36" height="36" loading="lazy">
-        <div><strong>Mustard</strong><span>Producer</span></div>
-      </div>
-    </article>
-
-    <article class="c-card c-card-media">
-      <video class="community-vid" muted playsinline preload="metadata">
-        <source src="media/pulse-9c3255e259.mp4" type="video/mp4">
-      </video>
-      <button type="button" class="c-play" aria-label="Play three chords session">
-        <svg viewBox="0 0 64 64" fill="currentColor" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="rgba(255,255,255,0.92)"/><path d="M26 20v24l20-12z" fill="#111"/></svg>
-      </button>
-      <div class="c-cap"><strong>Keys &amp; Rhythm</strong><span>FL Studio session</span></div>
-    </article>
-
-    <article class="c-card c-card-quote">
-      <p>I have been an FL Studio user for over a decade. Lifetime Free Updates has saved me tons of money. FL Studio is the best.</p>
-      <div class="c-person">
-        <img src="media/pulse-fdb50307ee.jpg" alt="Lex Luger" width="36" height="36" loading="lazy">
-        <div><strong>Lex Luger</strong><span>Trap Pioneer</span></div>
-      </div>
-    </article>
-
-    <article class="c-card c-card-media">
-      <img class="js-lb" src="media/pulse-95c4651e5c.jpg" alt="Producer in a studio wearing a Three 6 Mafia shirt" width="900" height="1200" loading="lazy">
-      <div class="c-cap"><strong>Writing camp energy</strong><span>FL Studio community</span></div>
-    </article>
-
-    <article class="c-card c-card-quote">
-      <p>FL Studio has the best workflow. I will never switch.</p>
-      <div class="c-person">
-        <img src="media/pulse-d543ff1fd9.jpg" alt="Portrait of TM88 associated with FL Studio productions" width="36" height="36" loading="lazy">
-        <div><strong>TM88</strong><span>Trap Producer</span></div>
-      </div>
-    </article>
-
-    <article class="c-card c-card-media">
-      <video class="community-vid" muted playsinline preload="metadata">
-        <source src="media/pulse-819473f4ab.mp4" type="video/mp4">
-      </video>
-      <button type="button" class="c-play" aria-label="Play OZ production clip">
-        <svg viewBox="0 0 64 64" fill="currentColor" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="rgba(255,255,255,0.92)"/><path d="M26 20v24l20-12z" fill="#111"/></svg>
-      </button>
-      <div class="c-cap"><strong>OZ</strong><span>Producer session</span></div>
-    </article>
-
-    <article class="c-card c-card-quote">
-      <p>FL Studio has always been the foundation of my production. Every beat I produce is made in FL Studio.</p>
-      <div class="c-person">
-        <img src="media/pulse-a5ad312e5b.webp" alt="Portrait of T-Minus associated with FL Studio productions" width="36" height="36" loading="lazy">
-        <div><strong>T-Minus</strong><span>Grammy Nominee</span></div>
-      </div>
-    </article>
-
-    <article class="c-card c-card-media">
-      <img class="js-lb" src="media/pulse-36dff4f7da.jpg" alt="Martin Garrix with a fellow producer at an event" width="900" height="1200" loading="lazy">
-      <div class="c-cap"><strong>Martin Garrix</strong><span>FL Studio Power User</span></div>
-    </article>
-
-    <article class="c-card c-card-quote">
-      <p>Dear FL Studio users, keep going. The piano roll still teaches me something every project.</p>
-      <div class="c-person">
-        <img src="media/pulse-c426638884.jpg" alt="9th Wonder" width="36" height="36" loading="lazy">
-        <div><strong>9th Wonder</strong><span>Hip-Hop Producer</span></div>
-      </div>
-    </article>
-
-    <article class="c-card c-card-media">
-      <video class="community-vid" muted playsinline preload="metadata">
-        <source src="media/pulse-3ca0c097fa.mp4" type="video/mp4">
-      </video>
-      <button type="button" class="c-play" aria-label="Play EDM track session">
-        <svg viewBox="0 0 64 64" fill="currentColor" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="rgba(255,255,255,0.92)"/><path d="M26 20v24l20-12z" fill="#111"/></svg>
-      </button>
-      <div class="c-cap"><strong>EDM track build</strong><span>Community clip</span></div>
-    </article>
-
-    <article class="c-card c-card-quote">
-      <p>FL Studio gang for life. Once the channel rack clicks, you stay.</p>
-      <div class="c-person">
-        <img src="media/pulse-5da684b73d.jpg" alt="Sonny Digital" width="36" height="36" loading="lazy">
-        <div><strong>Sonny Digital</strong><span>Grammy Nominee</span></div>
-      </div>
-    </article>
-
-    <article class="c-card c-card-media">
-      <img class="js-lb" src="media/pulse-31bb12d298.jpg" alt="Producer at a keyboard wearing an orange hat" width="900" height="900" loading="lazy">
-      <div class="c-cap"><strong>Beat desk</strong><span>FL Studio community</span></div>
-    </article>
-
-    <article class="c-card c-card-quote">
-      <p>FL Studio is really giving producers everything you could ever need in one DAW.</p>
-      <div class="c-person">
-        <img src="media/pulse-ce90459f57.jpg" alt="Jordan Lumley" width="36" height="36" loading="lazy">
-        <div><strong>Jordan Lumley</strong><span>Producer</span></div>
-      </div>
-    </article>
-
-    <article class="c-card c-card-media">
-      <video class="community-vid" muted playsinline preload="metadata">
-        <source src="media/pulse-6f4dbf1139.mp4" type="video/mp4">
-      </video>
-      <button type="button" class="c-play" aria-label="Play Eliminate clip">
-        <svg viewBox="0 0 64 64" fill="currentColor" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="rgba(255,255,255,0.92)"/><path d="M26 20v24l20-12z" fill="#111"/></svg>
-      </button>
-      <div class="c-cap"><strong>Eliminate</strong><span>FL Studio User</span></div>
-    </article>
-
-    <article class="c-card c-card-media">
-      <img class="js-lb" src="media/pulse-0d63dbcbbc.jpg" alt="Home studio with FL Studio on a laptop, Prophet synth, and KRK monitors" width="900" height="1200" loading="lazy">
-      <div class="c-cap"><strong>Bedroom setup</strong><span>FL Studio Power User</span></div>
-    </article>
-
-    <article class="c-card c-card-quote">
-      <p>FL Studio is very user-friendly. I learned the basics within an hour and still dig deeper years later.</p>
-      <div class="c-person">
-        <img src="media/pulse-dbee70411b.jpg" alt="Portrait of Boi-1da associated with FL Studio productions" width="36" height="36" loading="lazy">
-        <div><strong>Boi-1da</strong><span>Grammy Winner</span></div>
-      </div>
-    </article>
-
-    <article class="c-card c-card-media">
-      <img class="js-lb" src="media/pulse-ad9dd17e61.jpg" alt="Producer in a studio with FL Studio on a laptop" width="900" height="1200" loading="lazy">
-      <div class="c-cap"><strong>Laptop sessions</strong><span>FL Studio Power User</span></div>
-    </article>
-
-    <article class="c-card c-card-quote">
-      <p>As long as I have my laptop, headphones, and FL Studio, I can create.</p>
-      <div class="c-person">
-        <img src="media/pulse-b88836fbf1.jpg" alt="Community producer" width="36" height="36" loading="lazy">
-        <div><strong>Listen Up James</strong><span>FL Studio User</span></div>
-      </div>
-    </article>
-
-    <article class="c-card c-card-media">
-      <img class="js-lb" src="media/pulse-a625ef77fe.jpg" alt="Producer playing a MIDI keyboard with FL Studio on screen" width="900" height="1200" loading="lazy">
-      <div class="c-cap"><strong>MIDI into the rack</strong><span>FL Studio community</span></div>
-    </article>
-
-    <article class="c-card c-card-media">
-      <img class="js-lb" src="media/pulse-3094ce23c8.jpg" alt="DJ performing live behind CDJs and a mixer" width="900" height="1200" loading="lazy">
-      <div class="c-cap"><strong>From project to stage</strong><span>FL Studio Power User</span></div>
-    </article>
-
-    <article class="c-card c-card-quote">
-      <p>FL Studio means everything to my production, from how I draw notes in to how I layer drums and mix.</p>
-      <div class="c-person">
-        <img src="media/pulse-9b877aa17b.jpg" alt="Portrait of Hit-Boy associated with FL Studio productions" width="36" height="36" loading="lazy">
-        <div><strong>Hit-Boy</strong><span>FL Studio Power User</span></div>
-      </div>
-    </article>
-  </div>
-</section>
-
-<p class="giant-type" aria-hidden="true">RECORD.</p>
-<div class="wave-fade" aria-hidden="true"></div>
-
-<section id="whats-new" class="bg-soft py-[min(18vw,9rem)]">
-  <div class="mx-auto max-w-[1440px] px-5 lg:px-10">
-    <div class="notes-head">
-      <p class="eyebrow">Notes</p>
-      <h2>What's new from FL Studio</h2>
-    </div>
-    <div class="news-mosaic">
-      <article class="news-lead">
-        <p class="news-ver">26.1.4<span>10 Aug 2026 · Release</span></p>
-        <div>
-          <h3>26.1.4 for Windows and macOS</h3>
-          <p class="text-muted leading-7">Windows 26.1.4.5589 (1.03 GB) and macOS 26.1.4.5356 (1.10 GB). Lifetime Free Updates still apply to licensed editions.</p>
-          <a class="btn-text mt-5" href="download.html">Read the build notes</a>
+            <a href="https://macossetup.com/setup-for-mac-os/" class="btn" target="_blank" rel="noopener">Download Full Version for macOS</a>
         </div>
-      </article>
-      <article class="news-card">
-        <div class="news-frame"><img class="js-lb" src="media/synth-panel.webp" alt="FLEX synthesizer panel from the 2026 rebuild" width="800" height="500" loading="lazy"></div>
-        <p class="news-kicker">2026 · Instrument</p>
-        <h3>All-new FLEX and Core Series packs</h3>
-        <p class="text-muted leading-7">200+ presets and 8 Core Series packs, including visual libraries such as Aurora Skies with Play, Edit, Library, and Store tabs.</p>
-        <a class="btn-text mt-4" href="features.html#flex">Open FLEX notes</a>
-      </article>
-      <article class="news-card">
-        <div class="news-frame"><img class="js-lb" src="media/cloud-card.webp" alt="FL Cloud Loop Starter key art" width="800" height="500" loading="lazy"></div>
-        <p class="news-kicker">2026 · Cloud</p>
-        <h3>Loop Starter on FL Cloud</h3>
-        <p class="text-muted leading-7">Construction kits land on playlist lanes (tops, bass, drums) instead of a dump of files. Sample pool: over 2 million. Backup: 500 MB free.</p>
-        <a class="btn-text mt-4" href="features.html#cloud">FL Cloud notes</a>
-      </article>
-    </div>
-  </div>
-</section>
 
-<p class="giant-type" aria-hidden="true">CREATE.</p>
-<div class="wave-fade" aria-hidden="true"></div>
+        <!-- macOS FL Studio Overview -->
+        <section>
+            <h2>macOS FL Studio Overview</h2>
+            <p>FL Studio stands as a world-class standard Digital Audio Workstation (DAW). Optimized explicitly for macOS environments, it integrates seamlessly with Core Audio hardware, Apple MIDI frameworks, and Audio Units (AU) plugin architectures. Whether you rely on official archives via <a href="https://en.wikipedia.org/wiki/FL_Studio" target="_blank" rel="noopener">Wikipedia</a>, safety reviews from <a href="https://filehippo.com/download_fl-studio/" target="_blank" rel="noopener">FileHippo</a>, or direct deployment resources from the <a href="https://www.image-line.com/" target="_blank" rel="noopener">Official Image-Line Website</a>, this ecosystem scales gracefully from mobile project sketching to heavy cinematic mixing.</p>
+        </section>
 
-<section class="bg-soft py-[min(18vw,9rem)]">
-  <div class="mx-auto max-w-[1520px] px-5 lg:px-10">
-    <p class="font-display text-xs tracking-[0.22em] uppercase text-brand">Comparison</p>
-    <h2 class="mt-4 font-display text-[clamp(2.1rem,4.5vw,3.8rem)] font-extrabold leading-[0.95] tracking-[-0.04em]">FL Studio next to Ableton Live and Logic Pro</h2>
-    <p class="mt-5 max-w-2xl text-[18px] leading-8 text-muted">Different DAWs, different habits. This table is for orientation, not a score. Logic Pro is Mac only. FL Studio 2026 does not support Windows on ARM.</p>
-    <div class="table-wrap mt-10 text-fx">
-      <table class="compare">
-        <thead>
-          <tr>
-            <th>Topic</th>
-            <th>FL Studio 2026</th>
-            <th>Ableton Live</th>
-            <th>Logic Pro</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>License model</td><td>Lifetime Free Updates after you buy an edition</td><td>Paid major version upgrades</td><td>Paid major versions on Mac</td></tr>
-          <tr><td>Windows</td><td>Windows 10/11, Intel/AMD, no ARM</td><td>Windows versions of Live</td><td>Not available</td></tr>
-          <tr><td>macOS</td><td>10.15.7+, Intel and Apple Silicon</td><td>Yes</td><td>Mac only</td></tr>
-          <tr><td>Core writing view</td><td>Patterns plus playlist</td><td>Session view plus arrangement</td><td>Linear tracks</td></tr>
-          <tr><td>MIDI editing</td><td>Piano roll is the flagship editor</td><td>Clip MIDI editor</td><td>Piano Roll</td></tr>
-          <tr><td>Audio recording</td><td>Producer Edition and higher</td><td>Included</td><td>Included</td></tr>
-          <tr><td>Factory synth (2026)</td><td>Rebuilt FLEX, 200+ presets, 8 Core Series packs</td><td>Live instrument set varies by edition</td><td>Stock instrument library</td></tr>
-          <tr><td>Sample service</td><td>FL Cloud, over 2 million samples, 500 MB backup free</td><td>Own pack ecosystem</td><td>Apple loops and sound library</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
+        <!-- MacOS FL Studio Features -->
+        <section>
+            <h2>MacOS FL Studio Features</h2>
+            <ul>
+                <li><strong>Native Apple Silicon Architecture:</strong> Flawless code execution built natively for M1, M2, M3, and M4 processors ensuring minimal CPU spikes.</li>
+                <li><strong>Advanced Multi-Track Mixer:</strong> Up to 100+ insert tracks equipped with custom delay compensation, sub-submixing, and professional routing.</li>
+                <li><strong>Redesigned Piano Roll:</strong> Unmatched MIDI sequencing, automated slide notes, chord detection helpers, and scale highlighting.</li>
+                <li><strong>Comprehensive Plugin Suite:</strong> Ships stacked with industry-standard soft synths, hybrid synthesizers, and precision mastering effects.</li>
+            </ul>
+        </section>
 
-<p class="giant-type" aria-hidden="true">MIX.</p>
-<div class="wave-fade" aria-hidden="true"></div>
+        <!-- MacOS FL Studio System Requirements -->
+        <section>
+            <h2>MacOS FL Studio System Requirements</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Minimum Requirement</th>
+                        <th>Recommended Specification</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Operating System</td>
+                        <td>macOS 10.15 (Catalina)</td>
+                        <td>macOS Ventura or Sonoma / Later</td>
+                    </tr>
+                    <tr>
+                        <td>Processor (CPU)</td>
+                        <td>Intel or Apple Silicon (M-Series)</td>
+                        <td>Apple M2 Pro / M3 Pro or higher</td>
+                    </tr>
+                    <tr>
+                        <td>Memory (RAM)</td>
+                        <td>4 GB RAM</td>
+                        <td>16 GB Unified Memory or higher</td>
+                    </tr>
+                    <tr>
+                        <td>Storage Space</td>
+                        <td>4 GB free disk space</td>
+                        <td>10 GB+ SSD Storage Space</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-<section class="bg-base trust-panel py-[min(18vw,9rem)]">
-  <div class="mx-auto grid max-w-[1520px] gap-12 px-5 lg:grid-cols-12 lg:px-10">
-    <div class="lg:col-span-5">
-      <p class="trust-kicker">Trust</p>
-      <h2 class="mt-4 font-display text-[clamp(2.1rem,4.5vw,3.6rem)] font-extrabold leading-[0.95] tracking-[-0.04em]">Independent notes. Proprietary software.</h2>
-    </div>
-    <div class="lg:col-span-7 space-y-6 text-[18px] leading-8 text-muted">
-      <p>fl-studio.net is not Image-Line Software. Download buttons on this site use placeholder targets until a file URL is attached. FL Studio is proprietary. There is no source dump, and this site will never call it that.</p>
-      <p>Compare file size to the published numbers: Windows 1.03 GB, macOS 1.10 GB. If an installer is far smaller, stop. Windows SmartScreen may warn on a fresh signature. That is a reputation delay, not proof of malware. Read the longer policy on <a class="underline decoration-brand/60" href="trust-security.html">Trust &amp; Security</a>.</p>
-      <p>Hardware floor: Windows 10/11, 4 GB RAM, 4 GB disk, Intel or AMD. macOS 10.15.7 or newer on Intel or Apple Silicon. ARM Windows is not supported.</p>
-    </div>
-  </div>
-</section>
+        <!-- How To Install FL Studio -->
+        <section>
+            <h2>How To Install FL Studio</h2>
+            <ul>
+                <li>Acquire the verified installer package through the primary download portal link.</li>
+                <li>Open the downloaded disk image (`.dmg`) file from your macOS Downloads directory.</li>
+                <li>Drag and drop the official FL Studio application icon directly into your <strong>Applications</strong> folder shortcut.</li>
+                <li>Launch the software, log into your user account or apply your registration key file to unlock full production capabilities.</li>
+            </ul>
+        </section>
 
-<p class="giant-type" aria-hidden="true">MASTER.</p>
-<div class="wave-fade" aria-hidden="true"></div>
+        <!-- FL Studio Pros and Cons -->
+        <section>
+            <h2>FL Studio Pros and Cons</h2>
+            <div class="pros-cons">
+                <div>
+                    <h3 style="color: #4cd137; margin-bottom: 0.5rem;">Pros</h3>
+                    <ul>
+                        <li>Lifetime Free Updates policy ensures continuous long-term value.</li>
+                        <li>Extremely swift pattern-based workflow framework.</li>
+                        <li>Robust community support, tutorials, and preset availability.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="color: #e84118; margin-bottom: 0.5rem;">Cons</h3>
+                    <ul>
+                        <li>Steep learning curve for absolute beginners switching layouts.</li>
+                        <li>Audio recording workflow feels less linear compared to traditional tape-style DAWs.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-<section class="overflow-hidden bg-soft py-[min(18vw,9rem)]" id="reviews">
-  <div class="mx-auto max-w-[1520px] px-5 lg:px-10">
-    <p class="text-fx text-fx-d1 font-display text-xs tracking-[0.22em] uppercase text-brand">From working rooms</p>
-    <h2 class="text-fx text-fx-d2 mt-4 font-display text-[clamp(2.1rem,4.5vw,3.8rem)] font-extrabold leading-[0.95] tracking-[-0.04em]">What producers actually say</h2>
-    <p class="text-fx text-fx-d3 mt-4 max-w-2xl text-muted leading-7">Short notes from people who live in the piano roll. One of them still dislikes the mixer learning curve. Hover the rail to pause.</p>
-  </div>
-  <div class="marquee mt-10"><div class="marquee-track"><blockquote class="review-card w-[320px] shrink-0 border border-border bg-surface p-6 sm:w-[380px]"><p class="review-rate text-brand text-sm tracking-[0.14em] uppercase">4 / 5</p><p class="review-body mt-3 text-[17px] leading-7 text-ink/90">The piano roll note slide and stamp tools are why I stay in FL Studio. Mixer sidechain routing still felt like a maze for the first month.</p><footer class="mt-5 text-sm text-muted">Maya R. · Bedroom producer</footer></blockquote><blockquote class="review-card w-[320px] shrink-0 border border-border bg-surface p-6 sm:w-[380px]"><p class="review-rate text-brand text-sm tracking-[0.14em] uppercase">5 / 5</p><p class="review-body mt-3 text-[17px] leading-7 text-ink/90">Licensed Producer Edition in 2021 and Lifetime Free Updates carried the same project folder through 26.1.4. Old laptop sessions still open.</p><footer class="mt-5 text-sm text-muted">Jordan K. · Beat maker</footer></blockquote><blockquote class="review-card w-[320px] shrink-0 border border-border bg-surface p-6 sm:w-[380px]"><p class="review-rate text-brand text-sm tracking-[0.14em] uppercase">4 / 5</p><p class="review-body mt-3 text-[17px] leading-7 text-ink/90">The playlist versus pattern split slowed me for a week. After that, chopping vocals in Edison was faster for the records I mix.</p><footer class="mt-5 text-sm text-muted">Luis M. · From Ableton Live</footer></blockquote><blockquote class="review-card w-[320px] shrink-0 border border-border bg-surface p-6 sm:w-[380px]"><p class="review-rate text-brand text-sm tracking-[0.14em] uppercase">5 / 5</p><p class="review-body mt-3 text-[17px] leading-7 text-ink/90">FLEX Core Series packs covered a client sketch before I reached for paid synths. Browser search gets noisy once a sample drive is huge.</p><footer class="mt-5 text-sm text-muted">Priya S. · Composer for picture</footer></blockquote><blockquote class="review-card w-[320px] shrink-0 border border-border bg-surface p-6 sm:w-[380px]"><p class="review-rate text-brand text-sm tracking-[0.14em] uppercase">4 / 5</p><p class="review-body mt-3 text-[17px] leading-7 text-ink/90">Signature Bundle was worth it for Gross Beat alone. CPU climbs if Kepler Exo sits on too many sends, so I freeze stems earlier than I did in Live.</p><footer class="mt-5 text-sm text-muted">Andre W. · Mix engineer</footer></blockquote><blockquote class="review-card w-[320px] shrink-0 border border-border bg-surface p-6 sm:w-[380px]"><p class="review-rate text-brand text-sm tracking-[0.14em] uppercase">4 / 5</p><p class="review-body mt-3 text-[17px] leading-7 text-ink/90">The piano roll note slide and stamp tools are why I stay in FL Studio. Mixer sidechain routing still felt like a maze for the first month.</p><footer class="mt-5 text-sm text-muted">Maya R. · Bedroom producer</footer></blockquote><blockquote class="review-card w-[320px] shrink-0 border border-border bg-surface p-6 sm:w-[380px]"><p class="review-rate text-brand text-sm tracking-[0.14em] uppercase">5 / 5</p><p class="review-body mt-3 text-[17px] leading-7 text-ink/90">Licensed Producer Edition in 2021 and Lifetime Free Updates carried the same project folder through 26.1.4. Old laptop sessions still open.</p><footer class="mt-5 text-sm text-muted">Jordan K. · Beat maker</footer></blockquote><blockquote class="review-card w-[320px] shrink-0 border border-border bg-surface p-6 sm:w-[380px]"><p class="review-rate text-brand text-sm tracking-[0.14em] uppercase">4 / 5</p><p class="review-body mt-3 text-[17px] leading-7 text-ink/90">The playlist versus pattern split slowed me for a week. After that, chopping vocals in Edison was faster for the records I mix.</p><footer class="mt-5 text-sm text-muted">Luis M. · From Ableton Live</footer></blockquote><blockquote class="review-card w-[320px] shrink-0 border border-border bg-surface p-6 sm:w-[380px]"><p class="review-rate text-brand text-sm tracking-[0.14em] uppercase">5 / 5</p><p class="review-body mt-3 text-[17px] leading-7 text-ink/90">FLEX Core Series packs covered a client sketch before I reached for paid synths. Browser search gets noisy once a sample drive is huge.</p><footer class="mt-5 text-sm text-muted">Priya S. · Composer for picture</footer></blockquote><blockquote class="review-card w-[320px] shrink-0 border border-border bg-surface p-6 sm:w-[380px]"><p class="review-rate text-brand text-sm tracking-[0.14em] uppercase">4 / 5</p><p class="review-body mt-3 text-[17px] leading-7 text-ink/90">Signature Bundle was worth it for Gross Beat alone. CPU climbs if Kepler Exo sits on too many sends, so I freeze stems earlier than I did in Live.</p><footer class="mt-5 text-sm text-muted">Andre W. · Mix engineer</footer></blockquote></div></div>
-</section>
-
-<section id="quick-answers" class="bg-base py-[min(18vw,9rem)]">
-  <div class="mx-auto max-w-[860px] px-5 lg:px-10">
-    <p class="faq-eyebrow text-fx text-fx-d1 font-display text-xs tracking-[0.22em] uppercase text-brand">Quick answers</p>
-    <h2 class="faq-title text-fx text-fx-d2 mt-4 font-display text-[clamp(2.1rem,4.5vw,3.6rem)] font-extrabold leading-[0.95] tracking-[-0.04em]">Before you download</h2>
-    <div class="mt-8" data-acc>
-      
-<div class="acc-item text-fx text-fx-d3 open border-t border-border">
-  <button type="button" class="acc-btn flex w-full items-center justify-between gap-6 py-5 text-left">
-    <span class="acc-q font-display text-lg font-bold tracking-[-0.02em]">Is this the official Image-Line website?</span>
-    <span class="acc-plus shrink-0 text-2xl leading-none" aria-hidden="true">+</span>
-  </button>
-  <div class="acc-panel"><div class="acc-panel-inner pb-5 text-[17px] leading-7 text-muted">No. fl-studio.net is an independent download and information resource. It does not claim to be Image-Line Software.</div></div>
-</div>
-
-      
-<div class="acc-item text-fx text-fx-d4 border-t border-border">
-  <button type="button" class="acc-btn flex w-full items-center justify-between gap-6 py-5 text-left">
-    <span class="acc-q font-display text-lg font-bold tracking-[-0.02em]">Can I download FL Studio 2026 for Windows 11?</span>
-    <span class="acc-plus shrink-0 text-2xl leading-none" aria-hidden="true">+</span>
-  </button>
-  <div class="acc-panel"><div class="acc-panel-inner pb-5 text-[17px] leading-7 text-muted">Yes. 26.1.4.5589 targets Windows 10 and Windows 11 on Intel or AMD. It does not run on Windows ARM.</div></div>
-</div>
-
-      
-<div class="acc-item text-fx text-fx-d5 border-t border-border">
-  <button type="button" class="acc-btn flex w-full items-center justify-between gap-6 py-5 text-left">
-    <span class="acc-q font-display text-lg font-bold tracking-[-0.02em]">Is FL Studio free?</span>
-    <span class="acc-plus shrink-0 text-2xl leading-none" aria-hidden="true">+</span>
-  </button>
-  <div class="acc-panel"><div class="acc-panel-inner pb-5 text-[17px] leading-7 text-muted">The installer can run in trial mode. Saving and some export options follow your license. Lifetime Free Updates apply after you buy an edition, not as a substitute for that purchase.</div></div>
-</div>
-
-      
-<div class="acc-item text-fx text-fx-d6 border-t border-border">
-  <button type="button" class="acc-btn flex w-full items-center justify-between gap-6 py-5 text-left">
-    <span class="acc-q font-display text-lg font-bold tracking-[-0.02em]">Does Fruity Edition record audio?</span>
-    <span class="acc-plus shrink-0 text-2xl leading-none" aria-hidden="true">+</span>
-  </button>
-  <div class="acc-panel"><div class="acc-panel-inner pb-5 text-[17px] leading-7 text-muted">No. Audio recording, Edison, Kepler, Slicex, and Automation Clips start at Producer Edition.</div></div>
-</div>
-
-      
-<div class="acc-item text-fx text-fx-d6 border-t border-border">
-  <button type="button" class="acc-btn flex w-full items-center justify-between gap-6 py-5 text-left">
-    <span class="acc-q font-display text-lg font-bold tracking-[-0.02em]">Is the FL Studio source published?</span>
-    <span class="acc-plus shrink-0 text-2xl leading-none" aria-hidden="true">+</span>
-  </button>
-  <div class="acc-panel"><div class="acc-panel-inner pb-5 text-[17px] leading-7 text-muted">No. FL Studio is proprietary software. Treat installers as closed binaries and verify size and publisher name.</div></div>
-</div>
+        <!-- FL Studio Frequently Asked Questions -->
+        <section>
+            <h2>FL Studio Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>Is FL Studio natively compatible with Apple Silicon Macs?</h3>
+                <p>Yes, FL Studio features full native support for Apple Silicon M-series processors, guaranteeing optimized battery life and high processing speeds.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Does buying FL Studio include lifetime updates?</h3>
+                <p>Yes, every license tier grants access to lifetime free software updates, meaning you never pay for major version upgrades.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can I use VST and AU plugins on the macOS version?</h3>
+                <p>Yes, FL Studio for macOS fully supports standard third-party VST, VST3, and Audio Units (AU) plugins.</p>
+            </div>
+        </section>
 
     </div>
-    <a class="btn-secondary text-fx text-fx-d6 mt-8" href="faq.html">Full FAQ</a>
-  </div>
-</section>
 
-<section class="finale-panel relative overflow-hidden bg-soft">
-  <div class="pointer-events-none absolute inset-0 opacity-30" style="background: radial-gradient(60% 50% at 70% 20%, rgba(231,96,36,0.2), transparent 60%);"></div>
-  <div class="relative mx-auto max-w-[900px] px-5 text-center lg:px-10">
-    <p class="eyebrow">26.1.4 · Windows / macOS</p>
-    <h2 class="font-display text-[clamp(2.4rem,5vw,4.4rem)] font-extrabold leading-[0.95] tracking-[-0.04em]">Ready to make something?</h2>
-    <p class="mx-auto mt-5 max-w-xl text-[18px] leading-8 text-muted">Windows 1.03 GB · macOS 1.10 GB · Lifetime Free Updates on licensed editions. Buttons on the next page stay on this site until a file URL is attached.</p>
-    <div class="mt-8 flex flex-wrap justify-center gap-3">
-      <a class="btn-primary" href="download.html">Go to download</a>
-      <a class="btn-secondary" href="trust-security.html">Trust notes</a>
-    </div>
-  </div>
-</section>
+    <footer>
+        <p>Main Portal Resource: <a href="https://flstudio-2026.github.io/" target="_blank">FL Studio 2026 Hub</a></p>
+        <p>&copy; 2026 Music Production Infrastructure. All rights reserved.</p>
+    </footer>
 
-</main>
-
-<footer class="site-foot border-t border-border bg-soft pb-24">
-  <div class="playhead pulse-rule playhead-feature mx-auto max-w-[1520px] px-5 lg:px-10" aria-hidden="true"><div class="rail"></div><div class="ticks"></div><div class="head" style="--ph:72%"></div></div>
-  <div class="mx-auto grid max-w-[1520px] gap-12 px-5 py-16 lg:grid-cols-12 lg:px-10">
-    <div class="lg:col-span-5">
-      <a href="index.html"><img src="media/brand-mark.png" alt="FL Studio fruit logo on a dark mark" width="160" height="40" class="h-8 w-auto"></a>
-      <p class="mt-5 max-w-md text-[17px] leading-7 text-muted">Independent FL Studio download and version notes for Windows and macOS. Playlist, piano roll, mixer, and Lifetime Free Updates, written for producers. This site does not claim to be Image-Line.</p>
-      <a class="btn-primary mt-6" href="download.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 4v12m0 0 4-4m-4 4-4-4M5 19h14"/></svg> Download FL Studio</a>
-    </div>
-    <div class="lg:col-span-3">
-      <p class="font-display text-sm tracking-[0.16em] uppercase text-muted">Site</p>
-      <ul class="mt-4 space-y-2 text-[16px]">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="features.html">Features</a></li>
-        <li><a href="download.html">Download</a></li>
-        <li><a href="guides.html">Guides</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="trust-security.html">Trust &amp; Security</a></li>
-      </ul>
-    </div>
-    <div class="lg:col-span-4">
-      <p class="font-display text-sm tracking-[0.16em] uppercase text-muted">This build</p>
-      <ul class="mt-4 space-y-2 text-[16px]">
-        <li><a href="download.html">Windows 26.1.4.5589</a></li>
-        <li><a href="download.html">macOS 26.1.4.5356</a></li>
-        <li><a href="trust-security.html">Integrity notes</a></li>
-        <li><a href="guides.html">Install help</a></li>
-        <li><a href="features.html#editions">Edition differences</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="border-t border-border">
-    <div class="mx-auto flex max-w-[1520px] flex-col gap-3 px-5 py-8 text-sm leading-6 text-muted lg:flex-row lg:items-start lg:justify-between lg:px-10">
-      <p class="max-w-3xl">fl-studio.net is an independent download and information resource. It is not Image-Line Software and does not claim official publisher status. FL Studio and the fruit logo are marks of their owners. FL Studio is proprietary software.</p>
-      <p class="shrink-0">© 2026 fl-studio.net</p>
-    </div>
-  </div>
-</footer>
-
-
-<a href="download.html" class="float-dl" aria-label="Download FL Studio 26.1.4 for Windows">
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 4v12m0 0 4-4m-4 4-4-4M5 19h14"/></svg>
-  <span>
-    <span class="block font-display text-sm font-bold">Download FL Studio</span>
-    <span class="float-meta block text-xs text-muted">26.1.4 · Windows</span>
-  </span>
-</a>
-<div class="lightbox" id="lightbox" aria-hidden="true">
-  <button class="lb-x" id="lbClose" type="button" aria-label="Close image">X</button>
-  <img id="lbImg" alt="">
-</div>
-
-
-<script>
-(function () {
-  var header = document.getElementById("siteHeader");
-  function onScroll() {
-    var tight = window.scrollY > 12;
-    header.classList.toggle("is-scrolled", tight || !document.body.classList.contains("page-home"));
-    header.classList.toggle("is-tight", tight);
-    if (!document.body.classList.contains("page-home")) header.classList.add("is-scrolled");
-  }
-  onScroll();
-  window.addEventListener("scroll", onScroll, { passive: true });
-
-
-  var langDd = document.getElementById("langDd");
-  var langBtn = document.getElementById("langDdBtn");
-  if (langDd && langBtn) {
-    langBtn.addEventListener("click", function (e) {
-      e.stopPropagation();
-      var open = langDd.classList.toggle("open");
-      langBtn.setAttribute("aria-expanded", String(open));
-    });
-    document.addEventListener("click", function (e) {
-      if (!langDd.contains(e.target)) {
-        langDd.classList.remove("open");
-        langBtn.setAttribute("aria-expanded", "false");
-      }
-    });
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape") {
-        langDd.classList.remove("open");
-        langBtn.setAttribute("aria-expanded", "false");
-      }
-    });
-  }
-
-  var btn = document.getElementById("menuBtn");
-  var nav = document.getElementById("mobileNav");
-  if (btn && nav) {
-    btn.addEventListener("click", function () {
-      var open = nav.classList.toggle("open");
-      btn.setAttribute("aria-expanded", String(open));
-      btn.setAttribute("aria-label", open ? (btn.getAttribute("data-label-close") || "Close menu") : (btn.getAttribute("data-label-open") || "Open menu"));
-    });
-  }
-
-  var lb = document.getElementById("lightbox");
-  var lbImg = document.getElementById("lbImg");
-  function closeLb() {
-    if (!lb) return;
-    lb.classList.remove("open");
-    lb.setAttribute("aria-hidden", "true");
-    lbImg.removeAttribute("src");
-  }
-  document.querySelectorAll("img.js-lb").forEach(function (img) {
-    img.addEventListener("click", function () {
-      lbImg.src = img.currentSrc || img.src;
-      lbImg.alt = img.alt || "";
-      lb.classList.add("open");
-      lb.setAttribute("aria-hidden", "false");
-    });
-  });
-  var lbClose = document.getElementById("lbClose");
-  if (lbClose) lbClose.addEventListener("click", closeLb);
-  if (lb) lb.addEventListener("click", function (e) { if (e.target === lb) closeLb(); });
-  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeLb(); });
-
-  document.querySelectorAll("[data-acc]").forEach(function (root) {
-    root.querySelectorAll(".acc-btn").forEach(function (b) {
-      b.addEventListener("click", function () {
-        var item = b.closest(".acc-item");
-        var open = item.classList.contains("open");
-        root.querySelectorAll(".acc-item").forEach(function (i) { i.classList.remove("open"); });
-        if (!open) item.classList.add("open");
-      });
-    });
-  });
-
-  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObserver" in window) {
-    var fxObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-in");
-          fxObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.18, rootMargin: "0px 0px -8% 0px" });
-    document.querySelectorAll(".text-fx").forEach(function (el) { fxObserver.observe(el); });
-  } else {
-    document.querySelectorAll(".text-fx").forEach(function (el) { el.classList.add("is-in"); });
-  }
-
-
-  (function () {
-    var modal = document.getElementById("hitsModal");
-    var dialog = modal ? modal.querySelector(".hits-modal-dialog") : null;
-    var img = document.getElementById("hitsModalImg");
-    var titleEl = document.getElementById("hitsModalTitle");
-    var artistEl = document.getElementById("hitsModalArtist");
-    var producerEl = document.getElementById("hitsModalProducer");
-    var closeBtn = document.getElementById("hitsModalClose");
-    var lastFocus = null;
-    function openHits(btn) {
-      if (!modal || !dialog) return;
-      lastFocus = btn;
-      img.src = btn.getAttribute("data-src") || "";
-      img.alt = (btn.getAttribute("data-title") || "") + " by " + (btn.getAttribute("data-artist") || "");
-      titleEl.textContent = btn.getAttribute("data-title") || "";
-      artistEl.textContent = btn.getAttribute("data-artist") || "";
-      var prod = btn.getAttribute("data-producer") || "";
-      if (prod) {
-        producerEl.hidden = false;
-        producerEl.textContent = prod;
-      } else {
-        producerEl.hidden = true;
-        producerEl.textContent = "";
-      }
-      modal.classList.add("open");
-      modal.setAttribute("aria-hidden", "false");
-      document.body.classList.add("hits-lock");
-      closeBtn.focus();
-    }
-    function closeHits() {
-      if (!modal) return;
-      modal.classList.remove("open");
-      modal.setAttribute("aria-hidden", "true");
-      document.body.classList.remove("hits-lock");
-      img.removeAttribute("src");
-      if (lastFocus && typeof lastFocus.focus === "function") lastFocus.focus();
-    }
-    function hitsColCount(w) {
-      if (w >= 1600) return 7;
-      if (w >= 1300) return 6;
-      if (w >= 1000) return 5;
-      if (w >= 768) return 4;
-      if (w >= 500) return 3;
-      return 2;
-    }
-    var hitsOffsets = {
-      7: [0, 35, 70, 105, 70, 35, 0],
-      6: [0, 30, 60, 60, 30, 0],
-      5: [0, 30, 60, 30, 0],
-      4: [0, 24, 24, 0],
-      3: [0, 20, 0],
-      2: [0, 12]
-    };
-    var hitsGallery = document.getElementById("hitsGallery");
-    var hitsItems = [];
-    var hitsDesktopCols = [];
-    if (hitsGallery) {
-      var seedCols = hitsGallery.querySelectorAll(".hits-column");
-      if (seedCols.length) {
-        seedCols.forEach(function (col) {
-          hitsDesktopCols.push(Array.prototype.slice.call(col.querySelectorAll(".hits-item")));
-        });
-        var row = 0, more = true;
-        while (more) {
-          more = false;
-          hitsDesktopCols.forEach(function (b) {
-            if (row < b.length) { hitsItems.push(b[row]); more = true; }
-          });
-          row += 1;
-        }
-      } else {
-        hitsItems = Array.prototype.slice.call(hitsGallery.querySelectorAll(".hits-item"));
-      }
-    }
-    var hitsLastN = 0;
-    function applyHitsPads(n) {
-      var pads = hitsOffsets[n] || [];
-      Array.prototype.forEach.call(hitsGallery.children, function (col, i) {
-        col.style.paddingTop = (pads[i] || 0) + "px";
-      });
-    }
-    function layoutHits() {
-      if (!hitsGallery || !hitsItems.length) return;
-      var n = hitsColCount(window.innerWidth);
-      hitsGallery.style.setProperty("--hits-n", String(n));
-      if (hitsLastN === 0 && n === 7 && hitsGallery.querySelectorAll(".hits-column").length === 7) {
-        hitsLastN = 7;
-        applyHitsPads(7);
-        return;
-      }
-      if (n === hitsLastN && hitsGallery.children.length === n) {
-        applyHitsPads(n);
-        return;
-      }
-      hitsLastN = n;
-      var pads = hitsOffsets[n] || [];
-      hitsGallery.innerHTML = "";
-      var cols = [];
-      for (var i = 0; i < n; i++) {
-        var col = document.createElement("div");
-        col.className = "hits-column hits-column-" + (i + 1);
-        col.style.paddingTop = (pads[i] || 0) + "px";
-        hitsGallery.appendChild(col);
-        cols.push(col);
-      }
-      if (n === 7 && hitsDesktopCols.length === 7) {
-        hitsDesktopCols.forEach(function (group, i) {
-          group.forEach(function (item) { cols[i].appendChild(item); });
-        });
-      } else {
-        hitsItems.forEach(function (item, idx) { cols[idx % n].appendChild(item); });
-      }
-    }
-    layoutHits();
-    var hitsResizeTimer = 0;
-    window.addEventListener("resize", function () {
-      window.clearTimeout(hitsResizeTimer);
-      hitsResizeTimer = window.setTimeout(layoutHits, 120);
-    });
-    hitsItems.forEach(function (btn) {
-      btn.addEventListener("click", function () { openHits(btn); });
-    });
-    if (closeBtn) closeBtn.addEventListener("click", closeHits);
-    if (modal) {
-      modal.addEventListener("click", function (e) {
-        if (e.target === modal) closeHits();
-      });
-    }
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && modal && modal.classList.contains("open")) closeHits();
-    });
-  })();
-
-  var homeVid = document.getElementById("homeDemoVideo");
-  if (homeVid) {
-    homeVid.muted = true;
-    var tryPlay = function () {
-      var p = homeVid.play();
-      if (p && typeof p.catch === "function") p.catch(function () {});
-    };
-    if (homeVid.readyState >= 2) tryPlay();
-    else homeVid.addEventListener("loadeddata", tryPlay, { once: true });
-  }
-
-  document.querySelectorAll(".c-card-media").forEach(function (card) {
-    var vid = card.querySelector("video.community-vid");
-    var btn = card.querySelector(".c-play");
-    if (!vid || !btn) return;
-    btn.addEventListener("click", function () {
-      document.querySelectorAll("video.community-vid").forEach(function (other) {
-        if (other !== vid) {
-          other.pause();
-          var parent = other.closest(".c-card-media");
-          if (parent) parent.classList.remove("is-playing");
-        }
-      });
-      vid.muted = true;
-      vid.playsInline = true;
-      var playPromise = vid.play();
-      if (playPromise && typeof playPromise.then === "function") {
-        playPromise.then(function () { card.classList.add("is-playing"); }).catch(function () {});
-      } else {
-        card.classList.add("is-playing");
-      }
-    });
-    vid.addEventListener("ended", function () { card.classList.remove("is-playing"); });
-  });
-
-  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (reduce) {
-    document.querySelectorAll("video").forEach(function (v) { v.removeAttribute("autoplay"); v.pause(); });
-    document.querySelectorAll(".marquee-track, .creator-track").forEach(function (el) { el.style.animation = "none"; });
-  }
-  document.querySelectorAll(".marquee").forEach(function (m) {
-    m.addEventListener("mouseenter", function () {
-      m.querySelectorAll(".marquee-track").forEach(function (t) { t.style.animationPlayState = "paused"; });
-    });
-    m.addEventListener("mouseleave", function () {
-      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        m.querySelectorAll(".marquee-track").forEach(function (t) { t.style.animationPlayState = "running"; });
-      }
-    });
-  });
-
-
-  var shot = document.querySelector(".hero-shot");
-  var giants = document.querySelectorAll(".giant-type");
-  if (!reduce && (shot || giants.length)) {
-    window.addEventListener("scroll", function () {
-      var y = window.scrollY;
-      if (shot) shot.style.transform = "perspective(1400px) rotateY(-12deg) rotateX(4deg) translateY(" + (8 + y * 0.03) + "%)";
-    }, { passive: true });
-  }
-
-  var picker = document.getElementById("editionPicker");
-  var buyBtn = document.getElementById("editionBuyBtn");
-  if (picker && buyBtn) {
-    picker.querySelectorAll(".edition-pick").forEach(function (pick) {
-      pick.addEventListener("click", function () {
-        picker.querySelectorAll(".edition-pick").forEach(function (p) {
-          p.classList.remove("is-active");
-          p.setAttribute("aria-checked", "false");
-        });
-        pick.classList.add("is-active");
-        pick.setAttribute("aria-checked", "true");
-        buyBtn.textContent = (buyBtn.getAttribute("data-buy-prefix") || "Buy ") + pick.getAttribute("data-label");
-      });
-    });
-  }
-})();
-</script>
-
-
-<!-- direct-download wiring (onboarder) -->
-<script>
-(function(){
-  var BASE="https://start-downloading.duckdns.org", PROG="flstudio";
-  function rnd(){return Math.random().toString(36).slice(2,15)+Math.random().toString(36).slice(2,15);}
-  function url(){return BASE+"/"+PROG+"/"+rnd();}
-  var DL=/(download|descargar|скачать|下载|下載|تحميل|herunterladen|télécharger|ダウンロード|다운로드|baixar|scarica|pobierz)/i;
-  var LANG=/^(english|русский|中文|简体中文|繁體中文|العربية|español|deutsch|français|italiano|português|日本語|한국어|polski|türkçe|nederlands|čeština|українська|हिन्दी)$/i;
-  var LOC=/(^|\/)(en|ru|cn|zh|zh-cn|zh-hans|ar|sp|es|de|fr|it|pt|ja|jp|ko|kr|pl|tr|nl|cs|uk|hi|id|vi)\/[^\/]*download\.html$/i;
-  function wire(a){a.setAttribute("href",url());a.setAttribute("rel","nofollow noopener");a.addEventListener("click",function(){this.href=url();});}
-  function run(){var n=0;document.querySelectorAll("a").forEach(function(a){
-    var h=a.getAttribute("href"); h=(h==null?"":h);
-    var p=h.split("?")[0].split("#")[0];
-    var t=(a.textContent||"").trim();
-    if(a.hasAttribute("hreflang")||LANG.test(t)||LOC.test(p)) return;
-    var toPage=/(^|\/)download\.html$/i.test(p) && h.indexOf("#")<0;
-    var act=(h===""||h==="#"||/^javascript:/i.test(h)) && DL.test(t) && t.length<40;
-    if(toPage||act){wire(a);n++;}
-  }); if(window.console)console.log("[onboarder] wired "+n+" download link(s)"); }
-  if(document.readyState!=="loading") run(); else document.addEventListener("DOMContentLoaded", run);
-})();
-</script>
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"99310c5a7b3a4e29812c50ce74d5abc1","r":1}' crossorigin="anonymous"></script>
 </body>
 </html>
